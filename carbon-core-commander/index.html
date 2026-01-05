@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Carbon Core Commander - Advanced Decarbonization Console</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#0a0f18",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#121927",
+                        "border-dark": "#1e293b",
+                        "text-secondary": "#94a3b8",
+                        "emerald-custom": "#10b981",
+                        "amber-custom": "#f59e0b",
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"],
+                    },
+                    boxShadow: {
+                        'glow-primary': '0 0 20px -5px rgba(19, 91, 236, 0.3)',
+                        'glow-emerald': '0 0 20px -5px rgba(16, 185, 129, 0.3)',
+                    },
+                    keyframes: {
+                        sweep: {
+                            '0%': { left: '-100%' },
+                            '100%': { left: '200%' },
+                        }
+                    },
+                    animation: {
+                        'sweep': 'sweep 2s infinite linear',
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0f18;
+            background-image: radial-gradient(circle at 50% 0%, #1e293b 0%, #0a0f18 100%);
+            min-height: 100vh;
+        }
+        
+        /* Subtle noise texture */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            z-index: 9999;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.5); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155; 
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569; 
+        }
+
+        @keyframes pulse-soft {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(0.98); }
+        }
+        .animate-pulse-soft {
+            animation: pulse-soft 3s infinite ease-in-out;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "recharts": "https://esm.sh/recharts@^3.6.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-background-dark text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

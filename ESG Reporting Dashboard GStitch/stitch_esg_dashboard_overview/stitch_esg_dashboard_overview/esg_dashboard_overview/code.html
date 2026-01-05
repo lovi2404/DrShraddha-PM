@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ESG Dashboard Overview - Stitch</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "primary-dark": "#0e47b8",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "surface-dark": "#1a1d24",
+                        "border-dark": "#282e39",
+                        "text-secondary": "#9da6b9",
+                        "success": "#0bda5e",
+                        "warning": "#fa6238",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white overflow-hidden">
+<div class="flex h-screen w-full flex-col">
+<!-- Top Navbar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-border-dark bg-white dark:bg-background-dark px-6 py-3 shrink-0 z-20">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-gray-900 dark:text-white">
+<div class="size-8 flex items-center justify-center bg-primary rounded-lg text-white">
+<span class="material-symbols-outlined text-xl">dataset</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight">Stitch ESG</h2>
+</div>
+<label class="hidden md:flex flex-col min-w-40 h-10 w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full bg-gray-100 dark:bg-surface-dark border border-transparent focus-within:border-primary transition-colors">
+<div class="text-text-secondary flex items-center justify-center pl-3">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="flex w-full min-w-0 flex-1 bg-transparent border-none text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-0 placeholder:text-text-secondary px-3" placeholder="Search metrics, reports..."/>
+</div>
+</label>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden lg:flex items-center gap-6">
+<a class="text-gray-600 dark:text-text-secondary hover:text-primary dark:hover:text-white text-sm font-medium transition-colors" href="#">Documentation</a>
+<a class="text-gray-600 dark:text-text-secondary hover:text-primary dark:hover:text-white text-sm font-medium transition-colors" href="#">Support</a>
+</nav>
+<div class="h-6 w-px bg-gray-200 dark:bg-border-dark hidden lg:block"></div>
+<div class="flex gap-2">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-surface-dark text-gray-600 dark:text-text-secondary transition-colors relative">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-warning rounded-full border-2 border-white dark:border-background-dark"></span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-surface-dark text-gray-600 dark:text-text-secondary transition-colors">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-9 ring-2 ring-gray-100 dark:ring-surface-dark cursor-pointer" data-alt="User profile avatar showing a smiling person" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVM6Kt1_dNk1EKDQdygfzagH1MJjI8vbFVpEHSlH0Q2UIWmnZa1zh0IdIO0Y1_yw7y20DbloQJL3aCCuW1bx8sGZRg4YMHNt9DDUe7IojAHH-xaUrZyxlMwbCqNnF96dlhSXqy_qcFUlU7kxJylHfLGHQaL6nxek6fBhhHxykqldaLnqVXSwQMOP9EHyasW-VFhspUjSX1EVCNz4_bcQwb8seSpSnm4E2SFvEYPXMOON9RCCRZbLy2xiTraM1d5MVDIbmCI5z3YKSo");'></div>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+<!-- Sidebar -->
+<aside class="w-64 flex-col bg-white dark:bg-background-dark border-r border-gray-200 dark:border-border-dark hidden md:flex shrink-0">
+<div class="flex flex-col gap-1 p-4 h-full overflow-y-auto">
+<div class="mb-6 px-3">
+<p class="text-xs font-semibold text-text-secondary uppercase tracking-wider mb-2">Main Menu</p>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary mb-1" href="#">
+<span class="material-symbols-outlined fill-1">dashboard</span>
+<span class="text-sm font-medium">Overview</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 dark:text-text-secondary hover:bg-gray-100 dark:hover:bg-surface-dark hover:text-gray-900 dark:hover:text-white transition-colors mb-1" href="#">
+<span class="material-symbols-outlined">eco</span>
+<span class="text-sm font-medium">Environmental</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 dark:text-text-secondary hover:bg-gray-100 dark:hover:bg-surface-dark hover:text-gray-900 dark:hover:text-white transition-colors mb-1" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-sm font-medium">Social Impact</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 dark:text-text-secondary hover:bg-gray-100 dark:hover:bg-surface-dark hover:text-gray-900 dark:hover:text-white transition-colors mb-1" href="#">
+<span class="material-symbols-outlined">gavel</span>
+<span class="text-sm font-medium">Governance</span>
+</a>
+</div>
+<div class="mb-6 px-3">
+<p class="text-xs font-semibold text-text-secondary uppercase tracking-wider mb-2">Detailed Reports</p>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 dark:text-text-secondary hover:bg-gray-100 dark:hover:bg-surface-dark hover:text-gray-900 dark:hover:text-white transition-colors mb-1" href="#">
+<span class="material-symbols-outlined">co2</span>
+<span class="text-sm font-medium">Carbon Metrics</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 dark:text-text-secondary hover:bg-gray-100 dark:hover:bg-surface-dark hover:text-gray-900 dark:hover:text-white transition-colors mb-1" href="#">
+<span class="material-symbols-outlined">health_and_safety</span>
+<span class="text-sm font-medium">Consumer Well-being</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 dark:text-text-secondary hover:bg-gray-100 dark:hover:bg-surface-dark hover:text-gray-900 dark:hover:text-white transition-colors mb-1" href="#">
+<span class="material-symbols-outlined">globe</span>
+<span class="text-sm font-medium">UN Global Compact</span>
+</a>
+</div>
+<div class="mt-auto px-3">
+<div class="p-4 rounded-xl bg-gradient-to-br from-surface-dark to-background-dark border border-border-dark">
+<div class="flex items-center gap-2 text-white mb-2">
+<span class="material-symbols-outlined text-warning">warning</span>
+<span class="text-xs font-bold">Action Required</span>
+</div>
+<p class="text-xs text-text-secondary mb-3">Q3 Compliance Audit is due in 5 days.</p>
+<button class="w-full py-1.5 px-3 bg-white/10 hover:bg-white/20 rounded text-xs text-white font-medium transition-colors">View Details</button>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto bg-gray-50 dark:bg-[#0f1115]">
+<div class="max-w-[1400px] mx-auto p-6 lg:p-10">
+<!-- Title & Filters -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+<div>
+<h1 class="text-2xl font-bold text-gray-900 dark:text-white">ESG Performance Overview</h1>
+<p class="text-text-secondary text-sm mt-1">Real-time sustainability tracking and ratings.</p>
+</div>
+<div class="flex flex-wrap gap-3">
+<button class="flex h-9 items-center gap-2 rounded-lg bg-white dark:bg-surface-dark border border-gray-200 dark:border-border-dark px-3 hover:bg-gray-50 dark:hover:bg-[#232730] transition-colors">
+<span class="text-gray-600 dark:text-white text-sm font-medium">Global Region</span>
+<span class="material-symbols-outlined text-text-secondary text-[20px]">expand_more</span>
+</button>
+<button class="flex h-9 items-center gap-2 rounded-lg bg-white dark:bg-surface-dark border border-gray-200 dark:border-border-dark px-3 hover:bg-gray-50 dark:hover:bg-[#232730] transition-colors">
+<span class="text-gray-600 dark:text-white text-sm font-medium">Business Unit</span>
+<span class="material-symbols-outlined text-text-secondary text-[20px]">expand_more</span>
+</button>
+<button class="flex h-9 items-center gap-2 rounded-lg bg-primary text-white px-4 hover:bg-primary-dark transition-colors shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+<span class="text-sm font-medium">FY 2024</span>
+</button>
+</div>
+</div>
+<!-- Top KPI Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-8">
+<!-- Hero Card: Overall Score -->
+<div class="col-span-1 md:col-span-2 xl:col-span-1 bg-white dark:bg-surface-dark rounded-xl p-6 border border-gray-200 dark:border-border-dark shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -mr-10 -mt-10 pointer-events-none"></div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-sm font-medium text-text-secondary">Overall ESG Score</h3>
+<p class="text-xs text-text-secondary mt-1">Updated today</p>
+</div>
+<span class="px-2 py-1 bg-success/10 text-success text-xs font-bold rounded">AAA Rating</span>
+</div>
+<div class="flex items-end gap-3 mb-2">
+<span class="text-4xl font-bold text-gray-900 dark:text-white">84</span>
+<span class="text-lg text-text-secondary mb-1">/100</span>
+</div>
+<div class="w-full bg-gray-100 dark:bg-background-dark rounded-full h-2 mb-4">
+<div class="bg-primary h-2 rounded-full" style="width: 84%"></div>
+</div>
+<div class="flex items-center text-sm font-medium text-success">
+<span class="material-symbols-outlined text-lg mr-1">trending_up</span>
+                                +2.4% vs last year
+                            </div>
+</div>
+<!-- KPI 2: Carbon -->
+<div class="bg-white dark:bg-surface-dark rounded-xl p-6 border border-gray-200 dark:border-border-dark shadow-sm flex flex-col justify-between group hover:border-primary/50 transition-colors cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="p-2 bg-green-500/10 rounded-lg text-green-500">
+<span class="material-symbols-outlined">forest</span>
+</div>
+<span class="text-success text-xs font-bold bg-success/10 px-2 py-1 rounded">-5% YoY</span>
+</div>
+<div>
+<h3 class="text-sm font-medium text-text-secondary mb-1">Carbon Footprint</h3>
+<p class="text-2xl font-bold text-gray-900 dark:text-white">12.4 <span class="text-sm font-normal text-text-secondary">mt</span></p>
+</div>
+</div>
+<!-- KPI 3: Diversity -->
+<div class="bg-white dark:bg-surface-dark rounded-xl p-6 border border-gray-200 dark:border-border-dark shadow-sm flex flex-col justify-between group hover:border-primary/50 transition-colors cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="p-2 bg-blue-500/10 rounded-lg text-blue-500">
+<span class="material-symbols-outlined">diversity_3</span>
+</div>
+<span class="text-text-secondary text-xs font-medium">Target: 4.5</span>
+</div>
+<div>
+<h3 class="text-sm font-medium text-text-secondary mb-1">Employee Satisfaction</h3>
+<p class="text-2xl font-bold text-gray-900 dark:text-white">4.2 <span class="text-sm font-normal text-text-secondary">/ 5.0</span></p>
+</div>
+</div>
+<!-- KPI 4: Governance -->
+<div class="bg-white dark:bg-surface-dark rounded-xl p-6 border border-gray-200 dark:border-border-dark shadow-sm flex flex-col justify-between group hover:border-primary/50 transition-colors cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="p-2 bg-purple-500/10 rounded-lg text-purple-500">
+<span class="material-symbols-outlined">policy</span>
+</div>
+<span class="text-success text-xs font-bold bg-success/10 px-2 py-1 rounded">+1% Q3</span>
+</div>
+<div>
+<h3 class="text-sm font-medium text-text-secondary mb-1">Governance Rating</h3>
+<p class="text-2xl font-bold text-gray-900 dark:text-white">92%</p>
+</div>
+</div>
+</div>
+<!-- Main Charts Section -->
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-6 mb-8">
+<!-- Left Chart: ESG Score Progression -->
+<div class="xl:col-span-2 bg-white dark:bg-surface-dark rounded-xl border border-gray-200 dark:border-border-dark shadow-sm p-6">
+<div class="flex items-center justify-between mb-6">
+<div>
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white">ESG Score Progression</h3>
+<p class="text-sm text-text-secondary">12 Months Trend Analysis</p>
+</div>
+<button class="p-2 text-text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+<!-- Mock Chart Area -->
+<div class="relative h-64 w-full">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 800 200">
+<!-- Grid lines -->
+<line class="text-gray-100 dark:text-gray-800" stroke="currentColor" stroke-dasharray="4 4" x1="0" x2="800" y1="0" y2="0"></line>
+<line class="text-gray-100 dark:text-gray-800" stroke="currentColor" stroke-dasharray="4 4" x1="0" x2="800" y1="50" y2="50"></line>
+<line class="text-gray-100 dark:text-gray-800" stroke="currentColor" stroke-dasharray="4 4" x1="0" x2="800" y1="100" y2="100"></line>
+<line class="text-gray-100 dark:text-gray-800" stroke="currentColor" stroke-dasharray="4 4" x1="0" x2="800" y1="150" y2="150"></line>
+<!-- Gradient Area -->
+<defs>
+<lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#135bec" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#135bec" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,150 C100,140 150,160 250,100 C350,40 400,60 500,50 C600,40 700,20 800,10 V200 H0 Z" fill="url(#chartGradient)"></path>
+<!-- Line -->
+<path d="M0,150 C100,140 150,160 250,100 C350,40 400,60 500,50 C600,40 700,20 800,10" fill="none" stroke="#135bec" stroke-linecap="round" stroke-width="3"></path>
+<!-- Benchmark Line -->
+<path d="M0,130 C150,130 300,110 400,110 C550,110 700,90 800,80" fill="none" stroke="#9da6b9" stroke-dasharray="6 6" stroke-width="2"></path>
+</svg>
+<!-- Tooltip Mock -->
+<div class="absolute top-[20%] left-[60%] bg-white dark:bg-background-dark border border-border-dark p-3 rounded-lg shadow-xl z-10 pointer-events-none transform -translate-x-1/2 -translate-y-1/2">
+<p class="text-xs text-text-secondary mb-1">September 2024</p>
+<div class="flex items-center gap-2">
+<div class="size-2 rounded-full bg-primary"></div>
+<span class="text-sm font-bold text-gray-900 dark:text-white">82.5 Score</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between mt-4 px-2">
+<span class="text-xs text-text-secondary">Jan</span>
+<span class="text-xs text-text-secondary">Mar</span>
+<span class="text-xs text-text-secondary">May</span>
+<span class="text-xs text-text-secondary">Jul</span>
+<span class="text-xs text-text-secondary">Sep</span>
+<span class="text-xs text-text-secondary">Nov</span>
+</div>
+<div class="flex items-center gap-6 mt-6 justify-center">
+<div class="flex items-center gap-2">
+<div class="w-3 h-1 bg-primary rounded-full"></div>
+<span class="text-sm text-text-secondary">Your Performance</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-1 bg-text-secondary rounded-full opacity-50 border-t border-dashed border-white"></div>
+<span class="text-sm text-text-secondary">Industry Benchmark</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Shortcuts & Breakdown -->
+<div class="flex flex-col gap-6">
+<!-- Detailed Breakdown Shortcuts -->
+<div class="bg-white dark:bg-surface-dark rounded-xl border border-gray-200 dark:border-border-dark shadow-sm p-6 flex-1">
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Detailed Reports</h3>
+<div class="space-y-3">
+<a class="group flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-background-dark border border-transparent hover:border-gray-200 dark:hover:border-border-dark transition-all" href="#">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-green-500/10 flex items-center justify-center text-green-500 group-hover:bg-green-500 group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">compost</span>
+</div>
+<div>
+<p class="text-sm font-medium text-gray-900 dark:text-white">Carbon Metrics</p>
+<p class="text-xs text-text-secondary">View emissions breakdown</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-secondary group-hover:text-primary">arrow_forward_ios</span>
+</a>
+<a class="group flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-background-dark border border-transparent hover:border-gray-200 dark:hover:border-border-dark transition-all" href="#">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<div>
+<p class="text-sm font-medium text-gray-900 dark:text-white">Water Usage</p>
+<p class="text-xs text-text-secondary">Consumption analysis</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-secondary group-hover:text-primary">arrow_forward_ios</span>
+</a>
+<a class="group flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-background-dark border border-transparent hover:border-gray-200 dark:hover:border-border-dark transition-all" href="#">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">handshake</span>
+</div>
+<div>
+<p class="text-sm font-medium text-gray-900 dark:text-white">Social Impact</p>
+<p class="text-xs text-text-secondary">Community &amp; Labor</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-secondary group-hover:text-primary">arrow_forward_ios</span>
+</a>
+</div>
+</div>
+<!-- Mini Stat Card -->
+<div class="bg-gradient-to-r from-primary to-primary-dark rounded-xl p-6 text-white relative overflow-hidden">
+<div class="absolute right-0 top-0 opacity-10">
+<span class="material-symbols-outlined text-[120px]">verified</span>
+</div>
+<h4 class="text-lg font-bold mb-2 relative z-10">UN Global Compact</h4>
+<p class="text-sm opacity-90 mb-4 relative z-10 max-w-[80%]">Stitch is currently meeting 9/10 adherence principles.</p>
+<button class="text-xs font-bold bg-white text-primary px-3 py-2 rounded shadow-sm hover:bg-gray-100 transition-colors relative z-10">View Audit Report</button>
+</div>
+</div>
+</div>
+<!-- Bottom Section: Recent Activity & Regional Map Placeholder -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<!-- Recent Flags/Activity -->
+<div class="bg-white dark:bg-surface-dark rounded-xl border border-gray-200 dark:border-border-dark shadow-sm p-6">
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Recent Alerts &amp; Activity</h3>
+<div class="divide-y divide-gray-100 dark:divide-border-dark">
+<div class="py-3 flex gap-3 items-start">
+<div class="mt-1 size-2 rounded-full bg-warning shrink-0"></div>
+<div>
+<p class="text-sm font-medium text-gray-900 dark:text-white">Carbon Target Missed - APAC Region</p>
+<p class="text-xs text-text-secondary mt-0.5">Manufacturing Unit 4 exceeded monthly quota by 2.1%.</p>
+<span class="text-[10px] text-text-secondary mt-1 block">2 hours ago</span>
+</div>
+</div>
+<div class="py-3 flex gap-3 items-start">
+<div class="mt-1 size-2 rounded-full bg-success shrink-0"></div>
+<div>
+<p class="text-sm font-medium text-gray-900 dark:text-white">Audit Completed: Supply Chain</p>
+<p class="text-xs text-text-secondary mt-0.5">Annual supplier ethics audit completed with 98% pass rate.</p>
+<span class="text-[10px] text-text-secondary mt-1 block">Yesterday</span>
+</div>
+</div>
+<div class="py-3 flex gap-3 items-start">
+<div class="mt-1 size-2 rounded-full bg-primary shrink-0"></div>
+<div>
+<p class="text-sm font-medium text-gray-900 dark:text-white">New Report Available: Q3 Social Impact</p>
+<p class="text-xs text-text-secondary mt-0.5">The quarterly social impact assessment is ready for review.</p>
+<span class="text-[10px] text-text-secondary mt-1 block">2 days ago</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-4 py-2 text-sm text-text-secondary hover:text-primary border border-dashed border-gray-300 dark:border-border-dark rounded-lg hover:border-primary transition-colors">View All Notifications</button>
+</div>
+<!-- Regional Performance Map Placeholder -->
+<div class="bg-white dark:bg-surface-dark rounded-xl border border-gray-200 dark:border-border-dark shadow-sm p-6 flex flex-col">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Regional Performance</h3>
+<span class="material-symbols-outlined text-text-secondary">public</span>
+</div>
+<div class="flex-1 bg-background-light dark:bg-background-dark rounded-lg overflow-hidden relative">
+<!-- Abstract Map Representation using gradients and dots -->
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-200/50 to-transparent dark:from-gray-700/30 dark:to-transparent"></div>
+<!-- Fake Map Points -->
+<div class="absolute top-[30%] left-[20%] group cursor-pointer">
+<div class="size-3 bg-success rounded-full ring-4 ring-success/20 animate-pulse"></div>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-surface-dark text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">North America: 92/100</div>
+</div>
+<div class="absolute top-[40%] right-[30%] group cursor-pointer">
+<div class="size-3 bg-warning rounded-full ring-4 ring-warning/20 animate-pulse"></div>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-surface-dark text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">APAC: Alert</div>
+</div>
+<div class="absolute top-[25%] right-[45%] group cursor-pointer">
+<div class="size-3 bg-primary rounded-full ring-4 ring-primary/20 animate-pulse"></div>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-surface-dark text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">Europe: 88/100</div>
+</div>
+<img class="w-full h-full object-cover opacity-20 dark:opacity-10 mix-blend-overlay pointer-events-none" data-alt="Dark stylized world map background showing continents subtly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhsfUaWNACDRG5l66BwGkoPadAdHNQ6EstOyzARHBvueX-4MxZGtBoORVVFT7Pq351EUwWD4DT1lYr0WwGTgGzTi66z8ZwwNdreBmxZLWdWoR9zSUs7z3AwCW1k-3Q4Tb8o8vI83gQ02h49ZAj5CICDSBWVCEpOcJOG--d3ltjd9uiSRkvo0TPI5cudjqcncYtTavmWgGBETyKRLwdT_WtKxscxfutovnxVxlvcS8tYwpYEH6sq8CcdmtGZJMeIXFL7lfZUe_svBKA"/>
+</div>
+<div class="mt-4 flex gap-4 text-xs text-text-secondary">
+<div class="flex items-center gap-1"><div class="size-2 rounded-full bg-success"></div>High Performance</div>
+<div class="flex items-center gap-1"><div class="size-2 rounded-full bg-primary"></div>On Track</div>
+<div class="flex items-center gap-1"><div class="size-2 rounded-full bg-warning"></div>Needs Attention</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

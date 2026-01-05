@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UN Global Compact Compliance - Google Stitch</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111318",
+                        "surface-dark": "#1a1d21",
+                        "border-dark": "#282e39",
+                        "text-secondary": "#9da6b9"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for better look in dark mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111318; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3b4354; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4b5563; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white overflow-x-hidden">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation -->
+<div class="w-full border-b border-solid border-b-[#282e39] bg-[#111318]">
+<div class="flex justify-center">
+<div class="flex w-full max-w-[1280px] flex-col">
+<header class="flex items-center justify-between whitespace-nowrap px-4 py-3 lg:px-10">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-white">
+<div class="size-8 text-primary">
+<svg class="h-8 w-8" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Google Stitch ESG</h2>
+</div>
+<label class="hidden lg:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-[#9da6b9] flex border-none bg-[#282e39] items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined" style="font-size: 24px;">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#282e39] focus:border-none h-full placeholder:text-[#9da6b9] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search" value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden xl:flex items-center gap-9">
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Compliance</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Reports</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Settings</a>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-blue-600 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Generate Report</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ring-2 ring-white/10" data-alt="User profile picture placeholder, generic avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDg0k0t5gfriNWtUCy_uposekptQVp23HNb-5gS7-ejft7OuoTq3jzxsusDFD2GiKVf2-uJMTJxKaRzLUqVKdEws7zffitv8JF6NPg9-byZN4RJsfkBF_Iy7lsSwqccIvYc27J8GfNf2QdyFKBGodwsBD8WEhOUMtze7znd07BV72ZNiIJWsEAFxObEBKz1JZABU0wyVq-MKeTzcwM4-4yzuV3uX8CFPqVpNNV0Z4lJCuG5Sc3FztA1_zz8Cc3gajDeMBmxbKYNDZQr");'></div>
+</div>
+</header>
+</div>
+</div>
+</div>
+<!-- Main Content Area -->
+<div class="flex flex-1 justify-center py-5 px-4 lg:px-10">
+<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap gap-2 px-4 py-2">
+<a class="text-[#9da6b9] hover:text-white transition-colors text-sm font-medium leading-normal" href="#">Home</a>
+<span class="text-[#9da6b9] text-sm font-medium leading-normal">/</span>
+<a class="text-[#9da6b9] hover:text-white transition-colors text-sm font-medium leading-normal" href="#">ESG Dashboard</a>
+<span class="text-[#9da6b9] text-sm font-medium leading-normal">/</span>
+<span class="text-white text-sm font-medium leading-normal">UN Global Compact Compliance</span>
+</div>
+<!-- Page Heading -->
+<div class="flex flex-wrap justify-between gap-6 px-4 py-6 items-end">
+<div class="flex min-w-72 flex-col gap-3">
+<h1 class="text-white text-3xl lg:text-4xl font-black leading-tight tracking-[-0.033em]">UN Global Compact Compliance</h1>
+<p class="text-[#9da6b9] text-base font-normal leading-normal max-w-2xl">Monitor progress on human rights, labor, environment, and anti-corruption principles to ensure 2024 alignment.</p>
+</div>
+<div class="flex gap-3">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#282e39] hover:bg-[#323945] border border-white/10 text-white text-sm font-bold leading-normal transition-all">
+<span class="material-symbols-outlined mr-2 !text-lg">download</span>
+<span class="truncate">Export Data</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#282e39] hover:bg-[#323945] border border-white/10 text-white text-sm font-bold leading-normal transition-all">
+<span class="truncate">View Guidelines</span>
+</button>
+</div>
+</div>
+<!-- Stats -->
+<div class="flex flex-wrap gap-4 px-4 pb-8">
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 bg-surface-dark border border-[#3b4354] shadow-sm">
+<div class="flex items-center justify-between">
+<p class="text-[#9da6b9] text-sm font-medium uppercase tracking-wider">Compliance Level</p>
+<span class="material-symbols-outlined text-primary">verified</span>
+</div>
+<div class="flex items-end gap-3 mt-1">
+<p class="text-white tracking-tight text-3xl font-bold leading-tight">Advanced</p>
+<span class="text-[#0bda5e] text-sm font-bold mb-1 bg-[#0bda5e]/10 px-2 py-0.5 rounded">+5%</span>
+</div>
+<p class="text-[#9da6b9] text-xs mt-2">Top 10% of industry peers</p>
+</div>
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 bg-surface-dark border border-[#3b4354] shadow-sm">
+<div class="flex items-center justify-between">
+<p class="text-[#9da6b9] text-sm font-medium uppercase tracking-wider">Current Score</p>
+<span class="material-symbols-outlined text-primary">analytics</span>
+</div>
+<div class="flex items-end gap-3 mt-1">
+<p class="text-white tracking-tight text-3xl font-bold leading-tight">92/100</p>
+<span class="text-[#0bda5e] text-sm font-bold mb-1 bg-[#0bda5e]/10 px-2 py-0.5 rounded">+2%</span>
+</div>
+<p class="text-[#9da6b9] text-xs mt-2">Vs. previous quarter</p>
+</div>
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 bg-surface-dark border border-[#3b4354] shadow-sm">
+<div class="flex items-center justify-between">
+<p class="text-[#9da6b9] text-sm font-medium uppercase tracking-wider">Active Initiatives</p>
+<span class="material-symbols-outlined text-primary">pending_actions</span>
+</div>
+<div class="flex items-end gap-3 mt-1">
+<p class="text-white tracking-tight text-3xl font-bold leading-tight">14</p>
+</div>
+<p class="text-[#9da6b9] text-xs mt-2">3 Due this week</p>
+</div>
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 bg-surface-dark border border-[#3b4354] shadow-sm relative overflow-hidden group">
+<div class="absolute right-0 top-0 h-full w-1 bg-amber-500"></div>
+<div class="flex items-center justify-between">
+<p class="text-[#9da6b9] text-sm font-medium uppercase tracking-wider">Days to COP</p>
+<span class="material-symbols-outlined text-amber-500">timer</span>
+</div>
+<div class="flex items-end gap-3 mt-1">
+<p class="text-white tracking-tight text-3xl font-bold leading-tight">45 Days</p>
+</div>
+<p class="text-[#9da6b9] text-xs mt-2">Deadline: Oct 30, 2024</p>
+</div>
+</div>
+<!-- COP Timeline -->
+<div class="px-4 mb-8">
+<div class="rounded-xl border border-[#3b4354] bg-[#1a1d21]/50 p-6">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+<h3 class="text-white text-lg font-bold">Submission Timeline (2024)</h3>
+<span class="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">On Track</span>
+</div>
+<div class="relative w-full">
+<!-- Line -->
+<div class="absolute top-3 left-0 w-full h-1 bg-[#282e39] rounded-full -z-0"></div>
+<div class="absolute top-3 left-0 w-1/2 h-1 bg-primary rounded-full -z-0"></div>
+<!-- Steps -->
+<div class="flex justify-between relative z-10 w-full">
+<div class="flex flex-col items-center gap-3">
+<div class="w-7 h-7 rounded-full bg-primary border-4 border-[#1a1d21] shadow-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[14px]">check</span>
+</div>
+<div class="text-center">
+<p class="text-white text-xs font-bold">Q1 Data</p>
+<p class="text-[#9da6b9] text-[10px]">Completed</p>
+</div>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-7 h-7 rounded-full bg-primary border-4 border-[#1a1d21] shadow-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[14px]">check</span>
+</div>
+<div class="text-center">
+<p class="text-white text-xs font-bold">Data Collection</p>
+<p class="text-[#9da6b9] text-[10px]">Completed</p>
+</div>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-7 h-7 rounded-full bg-[#111318] border-2 border-primary shadow-lg flex items-center justify-center ring-4 ring-primary/20">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+</div>
+<div class="text-center">
+<p class="text-white text-xs font-bold">Drafting Report</p>
+<p class="text-primary text-[10px]">In Progress</p>
+</div>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-7 h-7 rounded-full bg-[#282e39] border-4 border-[#1a1d21] flex items-center justify-center"></div>
+<div class="text-center">
+<p class="text-[#9da6b9] text-xs font-bold">Internal Review</p>
+<p class="text-[#9da6b9] text-[10px]">Pending</p>
+</div>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-7 h-7 rounded-full bg-[#282e39] border-4 border-[#1a1d21] flex items-center justify-center"></div>
+<div class="text-center">
+<p class="text-[#9da6b9] text-xs font-bold">Submission</p>
+<p class="text-[#9da6b9] text-[10px]">Oct 30</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Compliance Pillars Grid -->
+<div class="px-4">
+<h2 class="text-white tracking-light text-[24px] font-bold leading-tight text-left pb-5">Compliance Pillars</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 mb-8">
+<!-- Human Rights -->
+<div class="bg-surface-dark rounded-xl p-5 border border-[#3b4354] hover:border-primary/50 transition-colors group">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 rounded-lg bg-pink-500/10 text-pink-500">
+<span class="material-symbols-outlined">diversity_3</span>
+</div>
+<span class="text-xs font-bold text-[#0bda5e] bg-[#0bda5e]/10 px-2 py-1 rounded">Compliant</span>
+</div>
+<h3 class="text-white font-bold text-lg mb-1">Human Rights</h3>
+<p class="text-[#9da6b9] text-xs mb-4">Principles 1 &amp; 2</p>
+<div class="mb-4">
+<div class="flex justify-between text-xs mb-1">
+<span class="text-white">Progress</span>
+<span class="text-white font-bold">98%</span>
+</div>
+<div class="w-full bg-[#282e39] rounded-full h-1.5">
+<div class="bg-pink-500 h-1.5 rounded-full" style="width: 98%"></div>
+</div>
+</div>
+<div class="pt-4 border-t border-[#282e39] flex justify-between items-center">
+<span class="text-[#9da6b9] text-xs">Open Issues</span>
+<span class="text-white font-bold text-sm">0</span>
+</div>
+</div>
+<!-- Labor -->
+<div class="bg-surface-dark rounded-xl p-5 border border-[#3b4354] hover:border-primary/50 transition-colors group">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 rounded-lg bg-blue-500/10 text-blue-500">
+<span class="material-symbols-outlined">engineering</span>
+</div>
+<span class="text-xs font-bold text-amber-500 bg-amber-500/10 px-2 py-1 rounded">Review</span>
+</div>
+<h3 class="text-white font-bold text-lg mb-1">Labor</h3>
+<p class="text-[#9da6b9] text-xs mb-4">Principles 3, 4, 5, 6</p>
+<div class="mb-4">
+<div class="flex justify-between text-xs mb-1">
+<span class="text-white">Progress</span>
+<span class="text-white font-bold">85%</span>
+</div>
+<div class="w-full bg-[#282e39] rounded-full h-1.5">
+<div class="bg-blue-500 h-1.5 rounded-full" style="width: 85%"></div>
+</div>
+</div>
+<div class="pt-4 border-t border-[#282e39] flex justify-between items-center">
+<span class="text-[#9da6b9] text-xs">Open Issues</span>
+<span class="text-white font-bold text-sm">2</span>
+</div>
+</div>
+<!-- Environment -->
+<div class="bg-surface-dark rounded-xl p-5 border border-[#3b4354] hover:border-primary/50 transition-colors group">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 rounded-lg bg-emerald-500/10 text-emerald-500">
+<span class="material-symbols-outlined">eco</span>
+</div>
+<span class="text-xs font-bold text-[#0bda5e] bg-[#0bda5e]/10 px-2 py-1 rounded">Compliant</span>
+</div>
+<h3 class="text-white font-bold text-lg mb-1">Environment</h3>
+<p class="text-[#9da6b9] text-xs mb-4">Principles 7, 8, 9</p>
+<div class="mb-4">
+<div class="flex justify-between text-xs mb-1">
+<span class="text-white">Progress</span>
+<span class="text-white font-bold">92%</span>
+</div>
+<div class="w-full bg-[#282e39] rounded-full h-1.5">
+<div class="bg-emerald-500 h-1.5 rounded-full" style="width: 92%"></div>
+</div>
+</div>
+<div class="pt-4 border-t border-[#282e39] flex justify-between items-center">
+<span class="text-[#9da6b9] text-xs">Open Issues</span>
+<span class="text-white font-bold text-sm">0</span>
+</div>
+</div>
+<!-- Anti-Corruption -->
+<div class="bg-surface-dark rounded-xl p-5 border border-[#3b4354] hover:border-primary/50 transition-colors group">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 rounded-lg bg-purple-500/10 text-purple-500">
+<span class="material-symbols-outlined">gavel</span>
+</div>
+<span class="text-xs font-bold text-[#0bda5e] bg-[#0bda5e]/10 px-2 py-1 rounded">Compliant</span>
+</div>
+<h3 class="text-white font-bold text-lg mb-1">Anti-Corruption</h3>
+<p class="text-[#9da6b9] text-xs mb-4">Principle 10</p>
+<div class="mb-4">
+<div class="flex justify-between text-xs mb-1">
+<span class="text-white">Progress</span>
+<span class="text-white font-bold">100%</span>
+</div>
+<div class="w-full bg-[#282e39] rounded-full h-1.5">
+<div class="bg-purple-500 h-1.5 rounded-full" style="width: 100%"></div>
+</div>
+</div>
+<div class="pt-4 border-t border-[#282e39] flex justify-between items-center">
+<span class="text-[#9da6b9] text-xs">Open Issues</span>
+<span class="text-white font-bold text-sm">0</span>
+</div>
+</div>
+</div>
+<!-- Initiatives Table and Side Info -->
+<div class="flex flex-col lg:flex-row gap-6 px-4 mb-10">
+<!-- Table -->
+<div class="flex-1 rounded-xl bg-surface-dark border border-[#3b4354] overflow-hidden">
+<div class="flex items-center justify-between p-5 border-b border-[#3b4354]">
+<h3 class="text-white text-lg font-bold">Active Initiatives</h3>
+<button class="text-primary text-sm font-bold hover:text-blue-400">View All</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-[#282e39]/50 text-[#9da6b9] text-xs uppercase tracking-wider">
+<th class="p-4 font-medium">Initiative Name</th>
+<th class="p-4 font-medium">Pillar</th>
+<th class="p-4 font-medium">Owner</th>
+<th class="p-4 font-medium">Due Date</th>
+<th class="p-4 font-medium">Status</th>
+</tr>
+</thead>
+<tbody class="text-sm divide-y divide-[#3b4354]">
+<tr class="group hover:bg-[#282e39]/30 transition-colors">
+<td class="p-4 text-white font-medium">Supplier Audit Phase 2</td>
+<td class="p-4 text-[#9da6b9]">Labor</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-500 text-xs flex items-center justify-center font-bold">JD</div>
+<span class="text-[#9da6b9]">J. Doe</span>
+</div>
+</td>
+<td class="p-4 text-[#9da6b9]">Oct 15, 2024</td>
+<td class="p-4"><span class="bg-emerald-500/10 text-emerald-500 px-2 py-1 rounded text-xs font-bold">On Track</span></td>
+</tr>
+<tr class="group hover:bg-[#282e39]/30 transition-colors">
+<td class="p-4 text-white font-medium">Carbon Offset Report</td>
+<td class="p-4 text-[#9da6b9]">Environment</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-500 text-xs flex items-center justify-center font-bold">AL</div>
+<span class="text-[#9da6b9]">A. Lee</span>
+</div>
+</td>
+<td class="p-4 text-[#9da6b9]">Oct 18, 2024</td>
+<td class="p-4"><span class="bg-amber-500/10 text-amber-500 px-2 py-1 rounded text-xs font-bold">At Risk</span></td>
+</tr>
+<tr class="group hover:bg-[#282e39]/30 transition-colors">
+<td class="p-4 text-white font-medium">Anti-Bribery Training</td>
+<td class="p-4 text-[#9da6b9]">Anti-Corruption</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-pink-500/20 text-pink-500 text-xs flex items-center justify-center font-bold">MS</div>
+<span class="text-[#9da6b9]">M. Smith</span>
+</div>
+</td>
+<td class="p-4 text-[#9da6b9]">Oct 22, 2024</td>
+<td class="p-4"><span class="bg-blue-500/10 text-blue-500 px-2 py-1 rounded text-xs font-bold">Review</span></td>
+</tr>
+<tr class="group hover:bg-[#282e39]/30 transition-colors">
+<td class="p-4 text-white font-medium">Conflict Minerals Policy</td>
+<td class="p-4 text-[#9da6b9]">Human Rights</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-indigo-500/20 text-indigo-500 text-xs flex items-center justify-center font-bold">RK</div>
+<span class="text-[#9da6b9]">R. Khan</span>
+</div>
+</td>
+<td class="p-4 text-[#9da6b9]">Nov 01, 2024</td>
+<td class="p-4"><span class="bg-emerald-500/10 text-emerald-500 px-2 py-1 rounded text-xs font-bold">On Track</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Sidebar / Quick Actions -->
+<div class="w-full lg:w-80 flex flex-col gap-6">
+<!-- Reporting Card -->
+<div class="bg-gradient-to-br from-[#135bec] to-[#0b3d99] rounded-xl p-6 text-white shadow-lg relative overflow-hidden">
+<div class="relative z-10">
+<div class="w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">assignment_add</span>
+</div>
+<h3 class="text-lg font-bold mb-2">Generate COP Report</h3>
+<p class="text-white/80 text-sm mb-6">Compile all metrics into a standard UN Global Compact format.</p>
+<button class="w-full bg-white text-primary font-bold py-2.5 rounded-lg hover:bg-white/90 transition-colors text-sm">
+                                        Start Draft
+                                    </button>
+</div>
+<!-- Decor -->
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-[120px] text-white/5 pointer-events-none">description</span>
+</div>
+<!-- Documents -->
+<div class="bg-surface-dark border border-[#3b4354] rounded-xl p-5">
+<h3 class="text-white font-bold text-sm mb-4">Recent Documents</h3>
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-3 p-2 hover:bg-[#282e39] rounded-lg cursor-pointer transition-colors group">
+<div class="bg-[#282e39] group-hover:bg-[#1a1d21] p-2 rounded text-[#9da6b9]">
+<span class="material-symbols-outlined text-sm">picture_as_pdf</span>
+</div>
+<div class="flex-1 overflow-hidden">
+<p class="text-white text-sm font-medium truncate">2023_COP_Final.pdf</p>
+<p class="text-[#9da6b9] text-xs">2.4 MB • Uploaded Jan 12</p>
+</div>
+</div>
+<div class="flex items-center gap-3 p-2 hover:bg-[#282e39] rounded-lg cursor-pointer transition-colors group">
+<div class="bg-[#282e39] group-hover:bg-[#1a1d21] p-2 rounded text-[#9da6b9]">
+<span class="material-symbols-outlined text-sm">table_view</span>
+</div>
+<div class="flex-1 overflow-hidden">
+<p class="text-white text-sm font-medium truncate">Labor_Audit_Q3.xlsx</p>
+<p class="text-[#9da6b9] text-xs">840 KB • Uploaded Yesterday</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-4 border border-[#3b4354] text-[#9da6b9] hover:text-white font-medium py-2 rounded-lg hover:bg-[#282e39] transition-colors text-xs">
+                                    Browse All
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

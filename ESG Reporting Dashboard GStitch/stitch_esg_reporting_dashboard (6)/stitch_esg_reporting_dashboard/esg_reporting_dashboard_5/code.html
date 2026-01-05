@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ESG Nexus Dashboard</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13eca4",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#111816", // Matched to provided component background
+                        "surface-dark": "#1d2a25", // Slightly lighter for cards
+                        "surface-highlight": "#283933", // Highlight state
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem", 
+                        "lg": "0.75rem", 
+                        "xl": "1rem", 
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white overflow-hidden">
+<div class="flex h-screen w-full overflow-hidden">
+<!-- SideNavBar -->
+<aside class="hidden lg:flex w-72 flex-col border-r border-[#283933] bg-background-dark p-4">
+<div class="flex items-center gap-3 px-2 mb-8 mt-2">
+<div class="flex items-center justify-center size-10 rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-2xl">eco</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-white text-lg font-bold leading-normal">ESG Nexus</h1>
+<p class="text-[#9db9b0] text-xs font-medium uppercase tracking-wider">Global Platform</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 flex-1">
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg bg-primary/10 border-l-4 border-primary" href="#">
+<span class="material-symbols-outlined text-primary">dashboard</span>
+<p class="text-white text-sm font-bold">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-[#9db9b0] hover:bg-[#283933] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">description</span>
+<p class="text-sm font-medium">Reports</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-[#9db9b0] hover:bg-[#283933] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">scatter_plot</span>
+<p class="text-sm font-medium">Materiality</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-[#9db9b0] hover:bg-[#283933] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">verified_user</span>
+<p class="text-sm font-medium">Compliance</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-[#9db9b0] hover:bg-[#283933] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<p class="text-sm font-medium">Data Entry</p>
+</a>
+</nav>
+<div class="mt-auto pt-4 border-t border-[#283933]">
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-[#9db9b0] hover:bg-[#283933] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium">Settings</p>
+</a>
+<div class="flex items-center gap-3 px-3 py-4 mt-2">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 ring-2 ring-[#283933]" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCr0efW_guDPRZA6ziV__PKvvJzSLWzSz-p0E9H5cHUXmwYUBEc4uHhcziCKof522jrmcpZ1Pv1cPMhgtfHTCROmFpcZ-fPDTF9QX5DWyHP7KbNTD-NXnsEGTZy47IiMN6XhBbMD_KfKYBmSK80DIXDobiI1_QzArt2My6O5kjuYdWDY9-7Wa7pZwyfZdx0S43Wu3WOTbfOFqRhWJkC2oaigmxTYP7DHZWB0vA2iUZV3crSfKuk6YVTNzwpLHB9KPVY-lqpY5XvUdlh");'></div>
+<div class="flex flex-col">
+<p class="text-white text-sm font-bold">Alex Morgan</p>
+<p class="text-[#9db9b0] text-xs">Sustainability Lead</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col h-full overflow-hidden bg-background-dark relative">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between border-b border-[#283933] px-6 py-4 bg-background-dark z-20">
+<div class="flex items-center gap-4 lg:hidden">
+<button class="text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h2 class="text-white text-lg font-bold">ESG Nexus</h2>
+</div>
+<h2 class="hidden lg:block text-white text-xl font-bold tracking-tight">Global ESG Overview</h2>
+<div class="flex items-center gap-4">
+<!-- Search -->
+<div class="hidden md:flex items-center h-10 rounded-lg bg-[#283933] px-3 min-w-[300px]">
+<span class="material-symbols-outlined text-[#9db9b0]">search</span>
+<input class="bg-transparent border-none text-white text-sm ml-2 w-full focus:ring-0 placeholder-[#9db9b0]" placeholder="Search metrics, regions, or standards..." type="text"/>
+</div>
+<!-- Actions -->
+<div class="flex gap-2">
+<button class="flex items-center justify-center size-10 rounded-lg bg-[#283933] text-white hover:bg-[#344a42] transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-primary rounded-full border border-[#283933]"></span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-lg bg-[#283933] text-white hover:bg-[#344a42] transition-colors">
+<span class="material-symbols-outlined">help</span>
+</button>
+<button class="hidden md:flex items-center gap-2 h-10 px-4 rounded-lg bg-primary text-background-dark font-bold text-sm hover:bg-[#10d692] transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>New Report</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto p-4 lg:p-8 scrollbar-hide">
+<div class="max-w-[1400px] mx-auto flex flex-col gap-6">
+<!-- Filters (Chips) -->
+<div class="flex flex-wrap gap-3 pb-2">
+<button class="group flex h-9 items-center gap-2 rounded-full bg-[#283933] px-4 hover:bg-primary/20 hover:text-primary transition-all border border-transparent hover:border-primary/50">
+<span class="text-white text-xs font-bold group-hover:text-primary">Region: Global</span>
+<span class="material-symbols-outlined text-white text-[16px] group-hover:text-primary">expand_more</span>
+</button>
+<button class="group flex h-9 items-center gap-2 rounded-full bg-[#283933] px-4 hover:bg-primary/20 hover:text-primary transition-all border border-transparent hover:border-primary/50">
+<span class="text-white text-xs font-bold group-hover:text-primary">Industry: All Sectors</span>
+<span class="material-symbols-outlined text-white text-[16px] group-hover:text-primary">expand_more</span>
+</button>
+<button class="group flex h-9 items-center gap-2 rounded-full bg-[#283933] px-4 hover:bg-primary/20 hover:text-primary transition-all border border-transparent hover:border-primary/50">
+<span class="text-white text-xs font-bold group-hover:text-primary">Framework: CSRD</span>
+<span class="material-symbols-outlined text-white text-[16px] group-hover:text-primary">expand_more</span>
+</button>
+<div class="h-9 w-[1px] bg-[#283933] mx-2"></div>
+<button class="text-[#9db9b0] text-xs font-medium hover:text-white underline decoration-dashed">Clear Filters</button>
+</div>
+<!-- Stats Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Stat 1 -->
+<div class="p-5 rounded-xl bg-[#1d2a25] border border-[#283933] hover:border-primary/30 transition-colors group">
+<div class="flex justify-between items-start mb-2">
+<p class="text-[#9db9b0] text-sm font-medium">Total Emissions</p>
+<span class="material-symbols-outlined text-primary bg-primary/10 rounded p-1 text-[20px]">co2</span>
+</div>
+<p class="text-white text-2xl font-bold mb-1">450 <span class="text-base text-[#9db9b0] font-normal">MT CO2e</span></p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]">trending_down</span>
+<span class="text-primary text-xs font-bold">-5%</span>
+<span class="text-[#5c736a] text-xs ml-1">vs last year</span>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="p-5 rounded-xl bg-[#1d2a25] border border-[#283933] hover:border-primary/30 transition-colors">
+<div class="flex justify-between items-start mb-2">
+<p class="text-[#9db9b0] text-sm font-medium">Social Investment</p>
+<span class="material-symbols-outlined text-[#eab308] bg-[#eab308]/10 rounded p-1 text-[20px]">volunteer_activism</span>
+</div>
+<p class="text-white text-2xl font-bold mb-1">$12.4M</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]">trending_up</span>
+<span class="text-primary text-xs font-bold">+12%</span>
+<span class="text-[#5c736a] text-xs ml-1">YTD</span>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="p-5 rounded-xl bg-[#1d2a25] border border-[#283933] hover:border-primary/30 transition-colors">
+<div class="flex justify-between items-start mb-2">
+<p class="text-[#9db9b0] text-sm font-medium">Governance Score</p>
+<span class="material-symbols-outlined text-[#3b82f6] bg-[#3b82f6]/10 rounded p-1 text-[20px]">gavel</span>
+</div>
+<p class="text-white text-2xl font-bold mb-1">85<span class="text-[#9db9b0] text-xl font-normal">/100</span></p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[#9db9b0] text-[16px]">remove</span>
+<span class="text-[#9db9b0] text-xs font-bold">Stable</span>
+<span class="text-[#5c736a] text-xs ml-1">Quarterly</span>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="p-5 rounded-xl bg-[#1d2a25] border border-[#283933] hover:border-primary/30 transition-colors">
+<div class="flex justify-between items-start mb-2">
+<p class="text-[#9db9b0] text-sm font-medium">Active Reports</p>
+<span class="material-symbols-outlined text-[#f97316] bg-[#f97316]/10 rounded p-1 text-[20px]">pending_actions</span>
+</div>
+<p class="text-white text-2xl font-bold mb-1">8 <span class="text-base text-[#9db9b0] font-normal">Pending</span></p>
+<div class="flex items-center gap-1">
+<span class="text-[#f97316] text-xs font-bold">2 Due This Week</span>
+</div>
+</div>
+</div>
+<!-- Charts Section -->
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+<!-- Main Chart: Sectoral Emissions -->
+<div class="xl:col-span-2 rounded-xl bg-[#1d2a25] border border-[#283933] p-6 flex flex-col">
+<div class="flex justify-between items-center mb-6">
+<div>
+<h3 class="text-white text-lg font-bold">Sectoral Emissions Trends</h3>
+<p class="text-[#9db9b0] text-xs">Comparative analysis (Energy vs Mining vs Utilities)</p>
+</div>
+<button class="p-2 hover:bg-[#283933] rounded-lg text-[#9db9b0] transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<!-- Custom Chart Visualization -->
+<div class="relative w-full h-64 flex-1 mt-4">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 800 200">
+<!-- Grid lines -->
+<line stroke="#283933" stroke-dasharray="4" x1="0" x2="800" y1="0" y2="0"></line>
+<line stroke="#283933" stroke-dasharray="4" x1="0" x2="800" y1="50" y2="50"></line>
+<line stroke="#283933" stroke-dasharray="4" x1="0" x2="800" y1="100" y2="100"></line>
+<line stroke="#283933" stroke-dasharray="4" x1="0" x2="800" y1="150" y2="150"></line>
+<line stroke="#283933" x1="0" x2="800" y1="200" y2="200"></line>
+<!-- Chart Area 1 (Energy) - Primary Color -->
+<path d="M0,120 Q100,100 200,110 T400,90 T600,60 T800,40" fill="none" stroke="#13eca4" stroke-width="3"></path>
+<path d="M0,120 Q100,100 200,110 T400,90 T600,60 T800,40 V200 H0 Z" fill="url(#gradientPrimary)" opacity="0.1"></path>
+<!-- Chart Area 2 (Mining) - Grey -->
+<path d="M0,160 Q100,150 200,160 T400,140 T600,150 T800,130" fill="none" stroke="#64748b" stroke-dasharray="5,5" stroke-width="2"></path>
+<defs>
+<lineargradient id="gradientPrimary" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#13eca4;stop-opacity:0.5"></stop>
+<stop offset="100%" style="stop-color:#13eca4;stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+</svg>
+<!-- Axis Labels -->
+<div class="flex justify-between mt-4 text-[#5c736a] text-xs font-mono">
+<span>JAN</span><span>FEB</span><span>MAR</span><span>APR</span><span>MAY</span><span>JUN</span>
+</div>
+</div>
+</div>
+<!-- Secondary Chart: Materiality Matrix -->
+<div class="rounded-xl bg-[#1d2a25] border border-[#283933] p-6 flex flex-col">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-white text-lg font-bold">Materiality Matrix</h3>
+<button class="text-primary text-xs font-bold hover:underline">Edit</button>
+</div>
+<div class="relative flex-1 bg-[#111816] rounded-lg border border-[#283933] p-4 min-h-[250px]">
+<!-- Quadrant Labels -->
+<div class="absolute top-2 right-2 text-[10px] text-white/40 font-bold uppercase tracking-widest text-right">Critical<br/>Issues</div>
+<!-- Axis -->
+<div class="absolute bottom-4 left-4 right-4 h-px bg-[#283933]"></div>
+<div class="absolute top-4 bottom-4 left-4 w-px bg-[#283933]"></div>
+<!-- Scatter Points -->
+<!-- Point 1: High/High -->
+<div class="absolute top-[20%] right-[15%] group cursor-pointer">
+<div class="size-3 rounded-full bg-primary shadow-[0_0_10px_#13eca4]"></div>
+<div class="absolute left-1/2 bottom-full mb-2 -translate-x-1/2 whitespace-nowrap bg-background-dark border border-[#283933] px-2 py-1 text-[10px] text-white rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+                                        Climate Adaptation
+                                    </div>
+</div>
+<!-- Point 2: High/Mid -->
+<div class="absolute top-[35%] right-[25%] group cursor-pointer">
+<div class="size-3 rounded-full bg-[#3b82f6]"></div>
+<div class="absolute left-1/2 bottom-full mb-2 -translate-x-1/2 whitespace-nowrap bg-background-dark border border-[#283933] px-2 py-1 text-[10px] text-white rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+                                        Data Privacy
+                                    </div>
+</div>
+<!-- Point 3: Mid/High -->
+<div class="absolute top-[30%] right-[40%] group cursor-pointer">
+<div class="size-3 rounded-full bg-[#f97316]"></div>
+<div class="absolute left-1/2 bottom-full mb-2 -translate-x-1/2 whitespace-nowrap bg-background-dark border border-[#283933] px-2 py-1 text-[10px] text-white rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+                                        Labor Rights
+                                    </div>
+</div>
+<!-- Labels for Axis -->
+<div class="absolute -left-2 bottom-1/2 -rotate-90 translate-y-1/2 text-[10px] text-[#5c736a] whitespace-nowrap font-bold">Impact on Business</div>
+<div class="absolute bottom-1 left-1/2 -translate-x-1/2 text-[10px] text-[#5c736a] font-bold">Stakeholder Importance</div>
+</div>
+</div>
+</div>
+<!-- Bottom Row: Compliance & Data -->
+<div class="grid grid-cols-1 xl:grid-cols-4 gap-6">
+<!-- Compliance Monitor -->
+<div class="xl:col-span-1 rounded-xl bg-[#1d2a25] border border-[#283933] p-0 overflow-hidden flex flex-col">
+<div class="p-5 border-b border-[#283933] bg-[#1d2a25]">
+<h3 class="text-white text-lg font-bold">Compliance Status</h3>
+</div>
+<div class="flex flex-col divide-y divide-[#283933]">
+<div class="flex items-center justify-between p-4 hover:bg-[#283933]/50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="bg-primary/20 text-primary p-1.5 rounded-md">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+</div>
+<div>
+<p class="text-white text-sm font-bold">CSRD</p>
+<p class="text-[#9db9b0] text-[10px]">EU Standard</p>
+</div>
+</div>
+<span class="text-primary text-xs font-bold bg-primary/10 px-2 py-1 rounded">Ready</span>
+</div>
+<div class="flex items-center justify-between p-4 hover:bg-[#283933]/50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="bg-[#f97316]/20 text-[#f97316] p-1.5 rounded-md">
+<span class="material-symbols-outlined text-sm">warning</span>
+</div>
+<div>
+<p class="text-white text-sm font-bold">GRI</p>
+<p class="text-[#9db9b0] text-[10px]">Global</p>
+</div>
+</div>
+<span class="text-[#f97316] text-xs font-bold bg-[#f97316]/10 px-2 py-1 rounded">Data Gap</span>
+</div>
+<div class="flex items-center justify-between p-4 hover:bg-[#283933]/50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="bg-[#3b82f6]/20 text-[#3b82f6] p-1.5 rounded-md">
+<span class="material-symbols-outlined text-sm">verified</span>
+</div>
+<div>
+<p class="text-white text-sm font-bold">SASB</p>
+<p class="text-[#9db9b0] text-[10px]">Industry</p>
+</div>
+</div>
+<span class="text-[#3b82f6] text-xs font-bold bg-[#3b82f6]/10 px-2 py-1 rounded">Verified</span>
+</div>
+<div class="flex items-center justify-between p-4 hover:bg-[#283933]/50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="bg-gray-700/50 text-gray-400 p-1.5 rounded-md">
+<span class="material-symbols-outlined text-sm">schedule</span>
+</div>
+<div>
+<p class="text-white text-sm font-bold">ISSB</p>
+<p class="text-[#9db9b0] text-[10px]">Finance</p>
+</div>
+</div>
+<span class="text-gray-400 text-xs font-bold bg-gray-700/30 px-2 py-1 rounded">Pending</span>
+</div>
+</div>
+</div>
+<!-- Data Table -->
+<div class="xl:col-span-3 rounded-xl bg-[#1d2a25] border border-[#283933] overflow-hidden flex flex-col">
+<div class="flex items-center justify-between p-5 border-b border-[#283933]">
+<h3 class="text-white text-lg font-bold">Detailed Metrics</h3>
+<div class="flex gap-2">
+<button class="flex items-center gap-1 text-[#9db9b0] text-xs hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm">download</span> Export
+                                    </button>
+<button class="flex items-center gap-1 text-[#9db9b0] text-xs hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm">filter_list</span> Filter
+                                    </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-[#111816]">
+<th class="p-4 text-xs font-bold text-[#9db9b0] uppercase tracking-wider">Sector</th>
+<th class="p-4 text-xs font-bold text-[#9db9b0] uppercase tracking-wider">Scope 1 (tCO2e)</th>
+<th class="p-4 text-xs font-bold text-[#9db9b0] uppercase tracking-wider">Scope 2 (tCO2e)</th>
+<th class="p-4 text-xs font-bold text-[#9db9b0] uppercase tracking-wider">Scope 3 (tCO2e)</th>
+<th class="p-4 text-xs font-bold text-[#9db9b0] uppercase tracking-wider">YoY Change</th>
+<th class="p-4 text-xs font-bold text-[#9db9b0] uppercase tracking-wider text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#283933] text-sm text-white">
+<tr class="hover:bg-[#283933]/50 transition-colors">
+<td class="p-4 font-bold flex items-center gap-2">
+<div class="size-2 rounded-full bg-blue-500"></div> Utilities
+                                            </td>
+<td class="p-4 font-mono text-[#cbd5e1]">12,450</td>
+<td class="p-4 font-mono text-[#cbd5e1]">4,320</td>
+<td class="p-4 font-mono text-[#cbd5e1]">89,100</td>
+<td class="p-4 text-primary font-bold">-2.4%</td>
+<td class="p-4 text-right">
+<button class="text-[#9db9b0] hover:text-white"><span class="material-symbols-outlined">visibility</span></button>
+</td>
+</tr>
+<tr class="hover:bg-[#283933]/50 transition-colors">
+<td class="p-4 font-bold flex items-center gap-2">
+<div class="size-2 rounded-full bg-purple-500"></div> Chemicals
+                                            </td>
+<td class="p-4 font-mono text-[#cbd5e1]">45,200</td>
+<td class="p-4 font-mono text-[#cbd5e1]">12,100</td>
+<td class="p-4 font-mono text-[#cbd5e1]">210,500</td>
+<td class="p-4 text-[#f97316] font-bold">+1.2%</td>
+<td class="p-4 text-right">
+<button class="text-[#9db9b0] hover:text-white"><span class="material-symbols-outlined">visibility</span></button>
+</td>
+</tr>
+<tr class="hover:bg-[#283933]/50 transition-colors">
+<td class="p-4 font-bold flex items-center gap-2">
+<div class="size-2 rounded-full bg-amber-500"></div> Mining
+                                            </td>
+<td class="p-4 font-mono text-[#cbd5e1]">32,100</td>
+<td class="p-4 font-mono text-[#cbd5e1]">8,400</td>
+<td class="p-4 font-mono text-[#cbd5e1]">56,200</td>
+<td class="p-4 text-[#9db9b0] font-bold">0.0%</td>
+<td class="p-4 text-right">
+<button class="text-[#9db9b0] hover:text-white"><span class="material-symbols-outlined">visibility</span></button>
+</td>
+</tr>
+<tr class="hover:bg-[#283933]/50 transition-colors">
+<td class="p-4 font-bold flex items-center gap-2">
+<div class="size-2 rounded-full bg-green-500"></div> Renewables
+                                            </td>
+<td class="p-4 font-mono text-[#cbd5e1]">1,200</td>
+<td class="p-4 font-mono text-[#cbd5e1]">400</td>
+<td class="p-4 font-mono text-[#cbd5e1]">12,800</td>
+<td class="p-4 text-primary font-bold">-15.4%</td>
+<td class="p-4 text-right">
+<button class="text-[#9db9b0] hover:text-white"><span class="material-symbols-outlined">visibility</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

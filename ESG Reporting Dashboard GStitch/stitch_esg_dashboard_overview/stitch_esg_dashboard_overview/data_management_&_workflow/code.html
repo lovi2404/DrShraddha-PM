@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Google Stitch - ESG Workflow</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "sidebar-dark": "#111318",
+                        "panel-dark": "#151a25",
+                        "border-dark": "#282e39",
+                        "text-secondary": "#9da6b9"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for dark mode webkit */
+        .dark ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #111318; 
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #282e39; 
+            border-radius: 4px;
+        }
+        .dark ::-webkit-scrollbar-thumb:hover {
+            background: #3b4354; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-white h-screen overflow-hidden flex selection:bg-primary selection:text-white">
+<!-- Sidebar -->
+<aside class="w-64 flex-none flex flex-col justify-between bg-sidebar-dark border-r border-border-dark h-full z-20 hidden md:flex">
+<div class="flex flex-col gap-4 p-4">
+<!-- Logo -->
+<div class="flex flex-col px-2 mb-4">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-3xl">data_exploration</span>
+<h1 class="text-white text-lg font-bold leading-normal">Google Stitch</h1>
+</div>
+<p class="text-text-secondary text-xs font-normal pl-9">ESG Dashboard</p>
+</div>
+<!-- Navigation -->
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary hover:bg-white/5 hover:text-white transition-colors group" href="#">
+<span class="material-symbols-outlined text-text-secondary group-hover:text-white">dashboard</span>
+<p class="text-sm font-medium">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-[#282e39] text-white" href="#">
+<span class="material-symbols-outlined text-primary fill-1">assignment</span>
+<p class="text-sm font-medium">Workflow</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary hover:bg-white/5 hover:text-white transition-colors group" href="#">
+<span class="material-symbols-outlined text-text-secondary group-hover:text-white">database</span>
+<p class="text-sm font-medium">Data Collection</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary hover:bg-white/5 hover:text-white transition-colors group" href="#">
+<span class="material-symbols-outlined text-text-secondary group-hover:text-white">pie_chart</span>
+<p class="text-sm font-medium">Reports</p>
+</a>
+<div class="h-px bg-white/10 my-2 mx-3"></div>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary hover:bg-white/5 hover:text-white transition-colors group" href="#">
+<span class="material-symbols-outlined text-text-secondary group-hover:text-white">group</span>
+<p class="text-sm font-medium">Team</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary hover:bg-white/5 hover:text-white transition-colors group" href="#">
+<span class="material-symbols-outlined text-text-secondary group-hover:text-white">settings</span>
+<p class="text-sm font-medium">Settings</p>
+</a>
+</nav>
+</div>
+<!-- User Profile (Mini) -->
+<div class="p-4 border-t border-border-dark">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-xs font-bold text-white shadow-lg" data-alt="User avatar gradient">LM</div>
+<div class="flex flex-col">
+<p class="text-white text-sm font-medium">Liam Miller</p>
+<p class="text-text-secondary text-xs">Sustainability Lead</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col h-full min-w-0 bg-background-light dark:bg-background-dark overflow-hidden">
+<!-- Top Scrollable Section (Header & Stats) -->
+<div class="flex-none p-6 pb-2 border-b border-border-dark/50 bg-background-light dark:bg-background-dark z-10 shadow-sm">
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap gap-2 mb-4">
+<a class="text-text-secondary text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<span class="text-text-secondary text-sm font-medium">/</span>
+<a class="text-text-secondary text-sm font-medium hover:text-primary transition-colors" href="#">ESG Reporting</a>
+<span class="text-text-secondary text-sm font-medium">/</span>
+<span class="text-gray-900 dark:text-white text-sm font-medium">Workflow Management</span>
+</div>
+<!-- Page Heading & Actions -->
+<div class="flex flex-wrap justify-between items-end gap-4 mb-6">
+<div class="flex flex-col gap-2 max-w-2xl">
+<h1 class="text-gray-900 dark:text-white text-3xl font-bold leading-tight tracking-tight">ESG Workflow: FY2024 Q3 Reporting</h1>
+<p class="text-text-secondary text-sm font-normal">Manage data collection tasks, review progress, and generate audit reports.</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 text-sm font-medium hover:bg-gray-50 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[20px]">file_download</span>
+                        Export
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-white text-sm font-medium shadow-lg hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+                        New Task
+                    </button>
+</div>
+</div>
+<!-- Stats Row -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-2">
+<div class="flex flex-col gap-1 rounded-xl p-5 border border-gray-200 dark:border-border-dark bg-white dark:bg-panel-dark shadow-sm">
+<div class="flex justify-between items-start">
+<p class="text-text-secondary text-sm font-medium">Pending Tasks</p>
+<span class="material-symbols-outlined text-orange-400">pending_actions</span>
+</div>
+<p class="text-gray-900 dark:text-white text-2xl font-bold">12</p>
+<div class="w-full bg-gray-200 dark:bg-white/10 h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-orange-500 h-1.5 rounded-full" style="width: 45%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-5 border border-gray-200 dark:border-border-dark bg-white dark:bg-panel-dark shadow-sm">
+<div class="flex justify-between items-start">
+<p class="text-text-secondary text-sm font-medium">Data Completeness</p>
+<span class="material-symbols-outlined text-primary">data_usage</span>
+</div>
+<p class="text-gray-900 dark:text-white text-2xl font-bold">78%</p>
+<div class="w-full bg-gray-200 dark:bg-white/10 h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full" style="width: 78%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-5 border border-gray-200 dark:border-border-dark bg-white dark:bg-panel-dark shadow-sm">
+<div class="flex justify-between items-start">
+<p class="text-text-secondary text-sm font-medium">Upcoming Deadline</p>
+<span class="material-symbols-outlined text-red-400">event_busy</span>
+</div>
+<p class="text-gray-900 dark:text-white text-2xl font-bold">Oct 15</p>
+<p class="text-text-secondary text-xs">2 days remaining</p>
+</div>
+</div>
+</div>
+<!-- Workspace (Split View) -->
+<div class="flex-1 flex overflow-hidden">
+<!-- Left: Task Board / Table -->
+<div class="flex-1 flex flex-col min-w-0 overflow-hidden bg-background-light dark:bg-background-dark">
+<!-- Toolbar -->
+<div class="px-6 py-4 flex flex-col sm:flex-row gap-4 justify-between items-center border-b border-border-dark/30">
+<div class="flex items-center gap-2 w-full sm:w-auto flex-1 max-w-lg">
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+<span class="material-symbols-outlined text-text-secondary">search</span>
+</div>
+<input class="block w-full p-2.5 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary focus:border-primary dark:bg-[#1a1f2b] dark:border-border-dark dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary" placeholder="Search metrics, tasks, or owners..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-2 self-end sm:self-auto">
+<button class="flex items-center gap-2 px-3 py-2 rounded-lg bg-white dark:bg-[#1a1f2b] border border-gray-200 dark:border-border-dark text-text-secondary text-sm hover:text-white hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+                            Filter
+                        </button>
+<button class="flex items-center gap-2 px-3 py-2 rounded-lg bg-white dark:bg-[#1a1f2b] border border-gray-200 dark:border-border-dark text-text-secondary text-sm hover:text-white hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-[18px]">sort</span>
+                            Sort
+                        </button>
+<div class="w-px h-6 bg-gray-300 dark:bg-white/10 mx-1"></div>
+<button class="p-2 rounded-lg bg-white dark:bg-[#1a1f2b] border border-gray-200 dark:border-border-dark text-text-secondary hover:text-white hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-[20px]">grid_view</span>
+</button>
+<button class="p-2 rounded-lg bg-primary/20 border border-primary/30 text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">view_list</span>
+</button>
+</div>
+</div>
+<!-- Table Content -->
+<div class="flex-1 overflow-y-auto p-0">
+<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+<thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-[#151a25] dark:text-gray-400 sticky top-0 z-10">
+<tr>
+<th class="px-6 py-4 font-semibold tracking-wider" scope="col">Metric Name</th>
+<th class="px-6 py-4 font-semibold tracking-wider" scope="col">Status</th>
+<th class="px-6 py-4 font-semibold tracking-wider" scope="col">Owner</th>
+<th class="px-6 py-4 font-semibold tracking-wider" scope="col">Category</th>
+<th class="px-6 py-4 font-semibold tracking-wider" scope="col">Last Update</th>
+<th class="px-6 py-4 font-semibold tracking-wider text-right" scope="col">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200 dark:divide-border-dark">
+<!-- Row 1: Active -->
+<tr class="bg-white dark:bg-[#1a1f2b] hover:bg-gray-50 dark:hover:bg-white/5 transition-colors cursor-pointer group border-l-4 border-l-primary">
+<td class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+<div class="flex flex-col">
+<span>Scope 1 Direct Emissions</span>
+<span class="text-xs text-text-secondary font-normal">Fuel combustion &amp; fleet</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-blue-900/30 dark:text-blue-300 border border-blue-200 dark:border-blue-800">In Review</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex -space-x-3 rtl:space-x-reverse">
+<div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1a1f2b] bg-green-500 flex items-center justify-center text-xs text-white" data-alt="User avatar 1">AD</div>
+<div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1a1f2b] bg-gray-600 flex items-center justify-center text-xs text-white" data-alt="User avatar 2">+2</div>
+</div>
+</td>
+<td class="px-6 py-4">Environmental</td>
+<td class="px-6 py-4">Today, 10:42 AM</td>
+<td class="px-6 py-4 text-right">
+<button class="text-gray-400 hover:text-white rounded-full p-1 hover:bg-white/10">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: Completed -->
+<tr class="bg-white dark:bg-[#111318] hover:bg-gray-50 dark:hover:bg-white/5 transition-colors cursor-pointer border-l-4 border-l-transparent">
+<td class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+<div class="flex flex-col">
+<span>Energy Consumption (HQ)</span>
+<span class="text-xs text-text-secondary font-normal">Electricity &amp; Heating</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-green-900/30 dark:text-green-300 border border-green-200 dark:border-green-800">Completed</span>
+</td>
+<td class="px-6 py-4">
+<div class="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-xs text-white" data-alt="User avatar 3">SJ</div>
+</td>
+<td class="px-6 py-4">Environmental</td>
+<td class="px-6 py-4">Yesterday</td>
+<td class="px-6 py-4 text-right">
+<button class="text-gray-400 hover:text-white rounded-full p-1 hover:bg-white/10">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: Pending -->
+<tr class="bg-white dark:bg-[#111318] hover:bg-gray-50 dark:hover:bg-white/5 transition-colors cursor-pointer border-l-4 border-l-transparent">
+<td class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+<div class="flex flex-col">
+<span>Diversity Stats (Global)</span>
+<span class="text-xs text-text-secondary font-normal">HR Data Integration</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-gray-700/30 dark:text-gray-300 border border-gray-200 dark:border-gray-600">Pending</span>
+</td>
+<td class="px-6 py-4">
+<div class="w-8 h-8 rounded-full bg-yellow-600 flex items-center justify-center text-xs text-white" data-alt="User avatar 4">MK</div>
+</td>
+<td class="px-6 py-4">Social</td>
+<td class="px-6 py-4">Oct 12</td>
+<td class="px-6 py-4 text-right">
+<button class="text-gray-400 hover:text-white rounded-full p-1 hover:bg-white/10">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: Error -->
+<tr class="bg-white dark:bg-[#111318] hover:bg-gray-50 dark:hover:bg-white/5 transition-colors cursor-pointer border-l-4 border-l-transparent">
+<td class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+<div class="flex flex-col">
+<span>Supply Chain Audit</span>
+<span class="text-xs text-text-secondary font-normal">Vendor Assessments</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-red-900/30 dark:text-red-300 border border-red-200 dark:border-red-800">Action Req.</span>
+</td>
+<td class="px-6 py-4">
+<div class="w-8 h-8 rounded-full bg-indigo-500 flex items-center justify-center text-xs text-white" data-alt="User avatar 5">TR</div>
+</td>
+<td class="px-6 py-4">Governance</td>
+<td class="px-6 py-4">Oct 10</td>
+<td class="px-6 py-4 text-right">
+<button class="text-gray-400 hover:text-white rounded-full p-1 hover:bg-white/10">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: Active -->
+<tr class="bg-white dark:bg-[#111318] hover:bg-gray-50 dark:hover:bg-white/5 transition-colors cursor-pointer border-l-4 border-l-transparent">
+<td class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+<div class="flex flex-col">
+<span>Waste Management Data</span>
+<span class="text-xs text-text-secondary font-normal">Recycling &amp; Landfill</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-blue-900/30 dark:text-blue-300 border border-blue-200 dark:border-blue-800">In Review</span>
+</td>
+<td class="px-6 py-4">
+<div class="w-8 h-8 rounded-full bg-pink-500 flex items-center justify-center text-xs text-white" data-alt="User avatar 6">EL</div>
+</td>
+<td class="px-6 py-4">Environmental</td>
+<td class="px-6 py-4">Oct 09</td>
+<td class="px-6 py-4 text-right">
+<button class="text-gray-400 hover:text-white rounded-full p-1 hover:bg-white/10">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Right: Context Panel (Task Details) -->
+<div class="w-[400px] hidden xl:flex flex-col border-l border-border-dark bg-white dark:bg-[#151a25] shadow-xl z-20">
+<!-- Panel Header -->
+<div class="p-6 border-b border-border-dark flex justify-between items-start">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-blue-900/30 text-blue-300 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">In Review</span>
+<span class="text-text-secondary text-xs">ID: ESG-24-081</span>
+</div>
+<h2 class="text-xl font-bold text-gray-900 dark:text-white">Scope 1 Direct Emissions</h2>
+</div>
+<button class="text-text-secondary hover:text-white">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Scrollable Panel Content -->
+<div class="flex-1 overflow-y-auto p-6 flex flex-col gap-6">
+<!-- Upload Zone -->
+<div class="flex flex-col gap-3">
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white">Data Upload</h3>
+<div class="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-[#1a1f2b] transition-colors group">
+<div class="flex flex-col items-center justify-center pt-5 pb-6">
+<span class="material-symbols-outlined text-gray-400 mb-2 group-hover:text-primary transition-colors">cloud_upload</span>
+<p class="mb-1 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold text-primary">Click to upload</span> or drag and drop</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">CSV, XLS up to 10MB</p>
+</div>
+</div>
+<!-- Uploaded File Item -->
+<div class="flex items-center justify-between p-3 bg-gray-50 dark:bg-[#1a1f2b] rounded-lg border border-gray-200 dark:border-border-dark">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-400">description</span>
+<div class="flex flex-col">
+<span class="text-sm font-medium text-gray-900 dark:text-white">Q3_Emissions_Raw.csv</span>
+<span class="text-xs text-text-secondary">2.4MB • Uploaded just now</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+</div>
+</div>
+<!-- Audit Trail / History -->
+<div class="flex flex-col gap-3">
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white">Audit Trail</h3>
+<div class="relative border-l border-gray-200 dark:border-gray-700 ml-2">
+<li class="mb-6 ml-6 list-none">
+<span class="absolute flex items-center justify-center w-5 h-5 bg-blue-100 rounded-full -left-2.5 ring-4 ring-white dark:ring-[#151a25] dark:bg-primary">
+<span class="material-symbols-outlined text-[12px] text-white">edit</span>
+</span>
+<h3 class="flex items-center mb-1 text-sm font-semibold text-gray-900 dark:text-white">Status changed to In Review</h3>
+<time class="block mb-2 text-xs font-normal leading-none text-gray-400 dark:text-gray-500">Just now by Liam Miller</time>
+</li>
+<li class="mb-6 ml-6 list-none">
+<span class="absolute flex items-center justify-center w-5 h-5 bg-gray-200 rounded-full -left-2.5 ring-4 ring-white dark:ring-[#151a25] dark:bg-gray-700">
+<span class="material-symbols-outlined text-[12px] text-white">upload_file</span>
+</span>
+<h3 class="mb-1 text-sm font-semibold text-gray-900 dark:text-white">New Data Uploaded</h3>
+<time class="block mb-2 text-xs font-normal leading-none text-gray-400 dark:text-gray-500">10:42 AM by Alex D.</time>
+<p class="text-xs font-normal text-text-secondary">System validated 1,240 rows with 99% confidence.</p>
+</li>
+<li class="ml-6 list-none">
+<span class="absolute flex items-center justify-center w-5 h-5 bg-gray-200 rounded-full -left-2.5 ring-4 ring-white dark:ring-[#151a25] dark:bg-gray-700">
+<span class="material-symbols-outlined text-[12px] text-white">add_task</span>
+</span>
+<h3 class="mb-1 text-sm font-semibold text-gray-900 dark:text-white">Task Created</h3>
+<time class="block mb-2 text-xs font-normal leading-none text-gray-400 dark:text-gray-500">Oct 01, 2024</time>
+</li>
+</div>
+</div>
+</div>
+<!-- Panel Footer (Chat & Actions) -->
+<div class="p-4 border-t border-border-dark bg-gray-50 dark:bg-[#111318]">
+<!-- Chat Input -->
+<div class="flex gap-2 items-center mb-4">
+<div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 flex-none flex items-center justify-center text-xs font-bold text-white" data-alt="Current user avatar">LM</div>
+<div class="flex-1 relative">
+<input class="w-full bg-white dark:bg-[#1a1f2b] border border-gray-300 dark:border-border-dark text-gray-900 dark:text-white text-sm rounded-lg focus:ring-primary focus:border-primary block p-2.5 pr-10" placeholder="Add a comment..." type="text"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 text-primary hover:text-primary/80">
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="grid grid-cols-2 gap-3">
+<button class="w-full px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-primary focus:z-10 focus:ring-2 focus:ring-primary dark:bg-[#1a1f2b] dark:border-border-dark dark:text-gray-400 dark:hover:text-white dark:hover:bg-white/5">
+                            Reject
+                        </button>
+<button class="w-full px-4 py-2 text-sm font-medium text-white bg-primary rounded-lg hover:bg-primary/90 focus:ring-4 focus:ring-primary/30">
+                            Approve
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

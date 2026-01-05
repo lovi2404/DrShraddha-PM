@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Social Impact Assessment - Google Stitch</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "surface-dark": "#1e293b", // Elevated card color
+                        "surface-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem", 
+                        "lg": "0.5rem", 
+                        "xl": "0.75rem", 
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for better aesthetics in dark mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #101622;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-hidden">
+<div class="flex h-screen w-full">
+<!-- Sidebar Navigation -->
+<aside class="w-64 flex-shrink-0 border-r border-slate-200 dark:border-slate-800 bg-surface-light dark:bg-[#111318] flex flex-col justify-between p-4 hidden md:flex">
+<div class="flex flex-col gap-8">
+<!-- User Profile / Branding -->
+<div class="flex items-center gap-3 px-2">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 shadow-inner" data-alt="Google Stitch Logo Abstract Gradient" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD6rxKxmjvyO-VvPZ1yLXSNsvvOrSThi8xn72F7DccAjyFsS32h1iR3yf-r172Ui7zGeUln8Zjr-ZUzFbdp6QqbPwEu-qQX0HPF51ciH47K5-IoZSjoby8iCi_YLX26kP6FL8a5tE7D2Oem6eKud67HG1hKTW4GlKj8mxSFX7a1UABWaPqT0tuVJL8RnGh71imPIIh7dzgWU_JYePXcpPTw03Bjo9zBzCPp2VVD4-auph4tzWAhjVJnD-RwpAm5NB28gtoFSxKlsdo4");'></div>
+<div class="flex flex-col">
+<h1 class="text-sm font-bold leading-tight">Google Stitch</h1>
+<p class="text-slate-500 dark:text-[#9da6b9] text-xs font-normal">ESG Analyst View</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-[#9da6b9] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">dashboard</span>
+<p class="text-sm font-medium">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-[#9da6b9] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">eco</span>
+<p class="text-sm font-medium">Environmental</p>
+</a>
+<!-- Active State -->
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 dark:bg-[#282e39] text-primary dark:text-white transition-colors" href="#">
+<span class="material-symbols-outlined fill">groups</span>
+<p class="text-sm font-medium">Social</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-[#9da6b9] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">gavel</span>
+<p class="text-sm font-medium">Governance</p>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-2 border-t border-slate-200 dark:border-slate-800 pt-4">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-[#9da6b9] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">settings</span>
+<p class="text-sm font-medium">Settings</p>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col h-full overflow-hidden relative">
+<!-- Sticky Top Header & Filters -->
+<header class="flex-shrink-0 bg-background-light dark:bg-background-dark/95 backdrop-blur-md z-10 p-6 pb-2 border-b border-transparent dark:border-slate-800/50">
+<div class="flex flex-wrap justify-between items-end gap-4 mb-6">
+<div class="flex flex-col gap-1">
+<h2 class="text-3xl md:text-4xl font-black tracking-tight dark:text-white text-slate-900">Social Impact Assessment</h2>
+<p class="text-slate-500 dark:text-[#9da6b9] text-sm md:text-base font-normal">Q3 2023 Reporting Cycle - Google Stitch</p>
+</div>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-blue-600 transition-colors">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span>Export Report</span>
+</button>
+</div>
+<!-- Filters Strip -->
+<div class="flex gap-3 flex-wrap items-center">
+<div class="relative group">
+<button class="flex h-9 items-center gap-x-2 rounded-lg bg-white dark:bg-[#282e39] border border-slate-200 dark:border-slate-700 pl-4 pr-3 hover:border-primary dark:hover:border-primary transition-colors">
+<span class="text-slate-700 dark:text-white text-sm font-medium">Year: 2023</span>
+<span class="material-symbols-outlined text-slate-400 text-[20px]">keyboard_arrow_down</span>
+</button>
+</div>
+<div class="relative group">
+<button class="flex h-9 items-center gap-x-2 rounded-lg bg-white dark:bg-[#282e39] border border-slate-200 dark:border-slate-700 pl-4 pr-3 hover:border-primary dark:hover:border-primary transition-colors">
+<span class="text-slate-700 dark:text-white text-sm font-medium">Region: Global</span>
+<span class="material-symbols-outlined text-slate-400 text-[20px]">keyboard_arrow_down</span>
+</button>
+</div>
+<div class="relative group">
+<button class="flex h-9 items-center gap-x-2 rounded-lg bg-white dark:bg-[#282e39] border border-slate-200 dark:border-slate-700 pl-4 pr-3 hover:border-primary dark:hover:border-primary transition-colors">
+<span class="text-slate-700 dark:text-white text-sm font-medium">Business Unit: All</span>
+<span class="material-symbols-outlined text-slate-400 text-[20px]">keyboard_arrow_down</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Scrollable Dashboard Content -->
+<div class="flex-1 overflow-y-auto p-6 pt-2">
+<div class="flex flex-col gap-6 max-w-[1400px]">
+<!-- KPI Row -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- KPI Card 1 -->
+<div class="bg-white dark:bg-[#1e293b] p-6 rounded-lg border border-slate-200 dark:border-slate-700/50 shadow-sm flex flex-col gap-1 relative overflow-hidden group">
+<div class="absolute right-0 top-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary">groups</span>
+</div>
+<p class="text-slate-500 dark:text-[#9da6b9] text-sm font-medium">Total Social Score</p>
+<div class="flex items-baseline gap-2">
+<p class="text-3xl font-bold dark:text-white tracking-tight">88<span class="text-xl text-slate-400">/100</span></p>
+<span class="text-[#0bda5e] bg-[#0bda5e]/10 px-2 py-0.5 rounded text-xs font-bold">+2.4%</span>
+</div>
+</div>
+<!-- KPI Card 2 -->
+<div class="bg-white dark:bg-[#1e293b] p-6 rounded-lg border border-slate-200 dark:border-slate-700/50 shadow-sm flex flex-col gap-1 relative overflow-hidden group">
+<div class="absolute right-0 top-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary">volunteer_activism</span>
+</div>
+<p class="text-slate-500 dark:text-[#9da6b9] text-sm font-medium">Volunteering Hours</p>
+<div class="flex items-baseline gap-2">
+<p class="text-3xl font-bold dark:text-white tracking-tight">12,450</p>
+<span class="text-[#0bda5e] bg-[#0bda5e]/10 px-2 py-0.5 rounded text-xs font-bold">+12% YoY</span>
+</div>
+</div>
+<!-- KPI Card 3 -->
+<div class="bg-white dark:bg-[#1e293b] p-6 rounded-lg border border-slate-200 dark:border-slate-700/50 shadow-sm flex flex-col gap-1 relative overflow-hidden group">
+<div class="absolute right-0 top-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary">target</span>
+</div>
+<p class="text-slate-500 dark:text-[#9da6b9] text-sm font-medium">D&amp;I Target</p>
+<div class="flex items-baseline gap-2">
+<p class="text-3xl font-bold dark:text-white tracking-tight">92%</p>
+<span class="text-slate-400 dark:text-slate-500 text-sm font-medium">Achieved</span>
+</div>
+</div>
+</div>
+<!-- Main Grid Row 1 -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Panel A: Diversity (8 Cols) -->
+<div class="lg:col-span-8 bg-white dark:bg-[#1e293b] rounded-lg border border-slate-200 dark:border-slate-700/50 p-6 shadow-sm">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="text-lg font-semibold dark:text-white">Diversity Breakdown</h3>
+<p class="text-slate-500 dark:text-[#9da6b9] text-sm">Leadership vs Workforce distribution across key demographics.</p>
+</div>
+<div class="flex gap-2">
+<button class="p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-400 hover:text-primary transition-colors"><span class="material-symbols-outlined">filter_list</span></button>
+<button class="p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-400 hover:text-primary transition-colors"><span class="material-symbols-outlined">more_horiz</span></button>
+</div>
+</div>
+<div class="grid min-h-[220px] gap-x-4 gap-y-8 grid-cols-[auto_1fr] items-center py-2">
+<p class="text-slate-500 dark:text-[#9da6b9] text-xs font-bold tracking-wider uppercase w-24">Gender</p>
+<div class="h-8 flex w-full rounded-md overflow-hidden bg-slate-100 dark:bg-slate-800">
+<div class="bg-primary h-full flex items-center justify-center text-[10px] text-white font-bold" style="width: 45%;">Female 45%</div>
+<div class="bg-slate-300 dark:bg-slate-600 h-full flex items-center justify-center text-[10px] text-slate-800 dark:text-white font-bold" style="width: 55%;">Male 55%</div>
+</div>
+<p class="text-slate-500 dark:text-[#9da6b9] text-xs font-bold tracking-wider uppercase w-24">Ethnicity</p>
+<div class="h-8 flex w-full rounded-md overflow-hidden bg-slate-100 dark:bg-slate-800">
+<div class="bg-primary h-full" style="width: 58%;"></div>
+<div class="bg-indigo-400 h-full" style="width: 22%;"></div>
+<div class="bg-cyan-400 h-full" style="width: 12%;"></div>
+<div class="bg-slate-300 dark:bg-slate-600 h-full" style="width: 8%;"></div>
+</div>
+<p class="text-slate-500 dark:text-[#9da6b9] text-xs font-bold tracking-wider uppercase w-24">Age</p>
+<div class="h-8 flex w-full rounded-md overflow-hidden bg-slate-100 dark:bg-slate-800 relative">
+<div class="bg-primary/80 h-full border-r border-background-dark" style="width: 20%;"></div>
+<div class="bg-primary/60 h-full border-r border-background-dark" style="width: 45%;"></div>
+<div class="bg-primary/40 h-full border-r border-background-dark" style="width: 25%;"></div>
+<div class="bg-slate-300 dark:bg-slate-600 h-full" style="width: 10%;"></div>
+</div>
+<p class="text-slate-500 dark:text-[#9da6b9] text-xs font-bold tracking-wider uppercase w-24">Disability</p>
+<div class="h-8 flex w-full rounded-md overflow-hidden bg-slate-100 dark:bg-slate-800">
+<div class="bg-primary h-full flex items-center pl-3 text-[10px] text-white font-bold" style="width: 12%;">12%</div>
+</div>
+</div>
+<div class="flex items-center gap-6 mt-6 justify-end">
+<div class="flex items-center gap-2">
+<span class="size-3 rounded-full bg-primary"></span>
+<span class="text-xs text-slate-500 dark:text-[#9da6b9]">Primary Group</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="size-3 rounded-full bg-indigo-400"></span>
+<span class="text-xs text-slate-500 dark:text-[#9da6b9]">Secondary</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="size-3 rounded-full bg-slate-300 dark:bg-slate-600"></span>
+<span class="text-xs text-slate-500 dark:text-[#9da6b9]">Other</span>
+</div>
+</div>
+</div>
+<!-- Panel B: Labor Trends (4 Cols) -->
+<div class="lg:col-span-4 bg-white dark:bg-[#1e293b] rounded-lg border border-slate-200 dark:border-slate-700/50 p-6 shadow-sm flex flex-col">
+<h3 class="text-lg font-semibold dark:text-white mb-1">Labor Practices</h3>
+<p class="text-slate-500 dark:text-[#9da6b9] text-sm mb-6">eNPS &amp; Safety Incident Trends</p>
+<div class="flex-1 flex flex-col justify-end gap-2">
+<div class="flex justify-between items-end h-[180px] w-full gap-2 px-2">
+<!-- Bar 1 -->
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-t-sm relative group cursor-pointer h-full flex items-end">
+<div class="w-full bg-primary/40 group-hover:bg-primary transition-all duration-300 rounded-t-sm relative" style="height: 40%;">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">Q1</div>
+</div>
+</div>
+<!-- Bar 2 -->
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-t-sm relative group cursor-pointer h-full flex items-end">
+<div class="w-full bg-primary/50 group-hover:bg-primary transition-all duration-300 rounded-t-sm relative" style="height: 55%;">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">Q2</div>
+</div>
+</div>
+<!-- Bar 3 -->
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-t-sm relative group cursor-pointer h-full flex items-end">
+<div class="w-full bg-primary/60 group-hover:bg-primary transition-all duration-300 rounded-t-sm relative" style="height: 45%;">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">Q3</div>
+</div>
+</div>
+<!-- Bar 4 (Current) -->
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-t-sm relative group cursor-pointer h-full flex items-end">
+<div class="w-full bg-primary group-hover:bg-primary transition-all duration-300 rounded-t-sm relative" style="height: 75%;">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">Q4</div>
+</div>
+</div>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-700 w-full pt-2 flex justify-between text-xs text-slate-500 dark:text-[#9da6b9]">
+<span>Q1</span><span>Q2</span><span>Q3</span><span>Q4 (Current)</span>
+</div>
+</div>
+<div class="mt-4 p-3 bg-slate-50 dark:bg-[#111318] rounded border border-slate-200 dark:border-slate-800 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-500 text-sm">warning</span>
+<span class="text-xs font-medium dark:text-white">Safety Incidents</span>
+</div>
+<span class="text-sm font-bold dark:text-white">0</span>
+</div>
+</div>
+</div>
+<!-- Main Grid Row 2 -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 pb-6">
+<!-- Panel C: Community Map -->
+<div class="bg-white dark:bg-[#1e293b] rounded-lg border border-slate-200 dark:border-slate-700/50 shadow-sm overflow-hidden flex flex-col">
+<div class="p-6 border-b border-slate-200 dark:border-slate-700/50 flex justify-between items-center">
+<h3 class="text-lg font-semibold dark:text-white">Community Engagement</h3>
+<button class="text-xs font-bold text-primary hover:underline">View Full Map</button>
+</div>
+<div class="relative h-[300px] w-full bg-slate-900">
+<!-- Map Background Placeholder -->
+<div class="absolute inset-0 bg-cover bg-center opacity-60" data-alt="Dark world map showing global engagement hotspots" data-location="World Map" style="background-image: url('https://placeholder.pics/svg/300');">
+</div>
+<!-- Overlay Stats -->
+<div class="absolute bottom-4 left-4 right-4 flex gap-3">
+<div class="bg-[#111318]/90 backdrop-blur-sm p-3 rounded-lg border border-slate-700 flex-1">
+<p class="text-[#9da6b9] text-xs">Total Investment</p>
+<p class="text-white font-bold">$4.2M</p>
+</div>
+<div class="bg-[#111318]/90 backdrop-blur-sm p-3 rounded-lg border border-slate-700 flex-1">
+<p class="text-[#9da6b9] text-xs">Lives Impacted</p>
+<p class="text-white font-bold">850k+</p>
+</div>
+</div>
+<!-- Map Pins (Simulated) -->
+<div class="absolute top-[30%] left-[25%] size-3 bg-primary rounded-full animate-pulse ring-4 ring-primary/30"></div>
+<div class="absolute top-[40%] right-[30%] size-3 bg-primary rounded-full animate-pulse ring-4 ring-primary/30"></div>
+<div class="absolute top-[60%] right-[20%] size-3 bg-primary rounded-full animate-pulse ring-4 ring-primary/30"></div>
+</div>
+</div>
+<!-- Panel D: Human Rights Table -->
+<div class="bg-white dark:bg-[#1e293b] rounded-lg border border-slate-200 dark:border-slate-700/50 shadow-sm flex flex-col">
+<div class="p-6 pb-2">
+<h3 class="text-lg font-semibold dark:text-white">Supply Chain Human Rights</h3>
+<p class="text-slate-500 dark:text-[#9da6b9] text-sm">Recent supplier audit status and risk assessment.</p>
+</div>
+<div class="overflow-x-auto p-2">
+<table class="w-full text-left text-sm">
+<thead class="text-xs uppercase text-slate-500 dark:text-[#9da6b9] font-semibold border-b border-slate-200 dark:border-slate-700">
+<tr>
+<th class="px-4 py-3">Supplier</th>
+<th class="px-4 py-3">Region</th>
+<th class="px-4 py-3">Risk Level</th>
+<th class="px-4 py-3">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 dark:divide-slate-700">
+<tr class="hover:bg-slate-50 dark:hover:bg-[#282e39]/50 transition-colors">
+<td class="px-4 py-3 font-medium dark:text-white">Acme Textiles Ltd.</td>
+<td class="px-4 py-3 text-slate-500 dark:text-[#9da6b9]">APAC</td>
+<td class="px-4 py-3"><span class="inline-flex items-center gap-1 text-orange-500 font-medium"><span class="size-2 rounded-full bg-orange-500"></span> Medium</span></td>
+<td class="px-4 py-3"><span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-green-500/10 text-green-500">Compliant</span></td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-[#282e39]/50 transition-colors">
+<td class="px-4 py-3 font-medium dark:text-white">Global Minerals Inc.</td>
+<td class="px-4 py-3 text-slate-500 dark:text-[#9da6b9]">Africa</td>
+<td class="px-4 py-3"><span class="inline-flex items-center gap-1 text-red-500 font-medium"><span class="size-2 rounded-full bg-red-500"></span> High</span></td>
+<td class="px-4 py-3"><span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-red-500/10 text-red-500">Action Required</span></td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-[#282e39]/50 transition-colors">
+<td class="px-4 py-3 font-medium dark:text-white">TechComponents Co.</td>
+<td class="px-4 py-3 text-slate-500 dark:text-[#9da6b9]">East Asia</td>
+<td class="px-4 py-3"><span class="inline-flex items-center gap-1 text-slate-500 dark:text-slate-400 font-medium"><span class="size-2 rounded-full bg-slate-400"></span> Low</span></td>
+<td class="px-4 py-3"><span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-green-500/10 text-green-500">Compliant</span></td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-[#282e39]/50 transition-colors">
+<td class="px-4 py-3 font-medium dark:text-white">LogiTrans Partners</td>
+<td class="px-4 py-3 text-slate-500 dark:text-[#9da6b9]">Europe</td>
+<td class="px-4 py-3"><span class="inline-flex items-center gap-1 text-slate-500 dark:text-slate-400 font-medium"><span class="size-2 rounded-full bg-slate-400"></span> Low</span></td>
+<td class="px-4 py-3"><span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-blue-500/10 text-blue-500">Auditing</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-3 border-t border-slate-200 dark:border-slate-700/50 flex justify-center">
+<button class="text-sm text-primary font-medium hover:text-blue-400 transition-colors">View All Suppliers</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

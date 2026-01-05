@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html class="" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AASB Compliance Overview</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#39E079", "background-light": "#f6f8f7", "background-dark": "#122017", "surface-dark": "#1d2a25", "surface-highlight": "#283933", "accent-blue": "#3b82f6", "accent-orange": "#f97316", "accent-yellow": "#eab308", "accent-red": "#ef4444"}, fontFamily: {display: "Manrope"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white overflow-hidden">
+<div class="flex h-screen w-full overflow-hidden">
+<aside class="hidden lg:flex w-72 flex-col border-r border-[#283933] bg-background-dark p-4">
+<div class="flex items-center gap-3 px-2 mb-8 mt-2">
+<div class="flex items-center justify-center size-10 rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-2xl">eco</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-white text-lg font-bold leading-normal">ESG Nexus</h1>
+<p class="text-[#9db9b0] text-xs font-medium uppercase tracking-wider">Global Platform</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 flex-1">
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-[#9db9b0] hover:bg-[#283933] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-[#9db9b0] hover:bg-[#283933] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">description</span>
+<p class="text-sm font-medium">Reports</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-[#9db9b0] hover:bg-[#283933] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">scatter_plot</span>
+<p class="text-sm font-medium">Materiality</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg bg-primary/10 border-l-4 border-primary" href="#">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<p class="text-white text-sm font-bold">Compliance</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-[#9db9b0] hover:bg-[#283933] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<p class="text-sm font-medium">Data Entry</p>
+</a>
+</nav>
+<div class="mt-auto pt-4 border-t border-[#283933]">
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-[#9db9b0] hover:bg-[#283933] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium">Settings</p>
+</a>
+<div class="flex items-center gap-3 px-3 py-4 mt-2">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 ring-2 ring-[#283933]" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCr0efW_guDPRZA6ziV__PKvvJzSLWzSz-p0E9H5cHUXmwYUBEc4uHhcziCKof522jrmcpZ1Pv1cPMhgtfHTCROmFpcZ-fPDTF9QX5DWyHP7KbNTD-NXnsEGTZy47IiMN6XhBbMD_KfKYBmSK80DIXDobiI1_QzArt2My6O5kjuYdWDY9-7Wa7pZwyfZdx0S43Wu3WOTbfOFqRhWJkC2oaigmxTYP7DHZWB0vA2iUZV3crSfKuk6YVTNzwpLHB9KPVY-lqpY5XvUdlh");'></div>
+<div class="flex flex-col">
+<p class="text-white text-sm font-bold">Alex Morgan</p>
+<p class="text-[#9db9b0] text-xs">Sustainability Lead</p>
+</div>
+</div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col h-full overflow-hidden bg-background-dark relative">
+<header class="flex items-center justify-between border-b border-[#283933] px-6 py-4 bg-background-dark z-20">
+<div class="flex items-center gap-4 lg:hidden">
+<button class="text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h2 class="text-white text-lg font-bold">ESG Nexus</h2>
+</div>
+<h2 class="hidden lg:block text-white text-xl font-bold tracking-tight">AASB Compliance Overview</h2>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center h-10 rounded-lg bg-[#283933] px-3 min-w-[300px]">
+<span class="material-symbols-outlined text-[#9db9b0]">search</span>
+<input class="bg-transparent border-none text-white text-sm ml-2 w-full focus:ring-0 placeholder-[#9db9b0]" placeholder="Search standards, targets, or risks..." type="text"/>
+</div>
+<div class="flex gap-2">
+<button class="flex items-center justify-center size-10 rounded-lg bg-[#283933] text-white hover:bg-[#344a42] transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-primary rounded-full border border-[#283933]"></span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-lg bg-[#283933] text-white hover:bg-[#344a42] transition-colors">
+<span class="material-symbols-outlined">help</span>
+</button>
+<button class="hidden md:flex items-center gap-2 h-10 px-4 rounded-lg bg-primary text-background-dark font-bold text-sm hover:bg-[#10d692] transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>New Disclosure</span>
+</button>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-4 lg:p-8 scrollbar-hide">
+<div class="max-w-[1400px] mx-auto flex flex-col gap-6">
+<div class="flex flex-wrap gap-3 pb-2">
+<button class="group flex h-9 items-center gap-2 rounded-full bg-[#283933] px-4 hover:bg-primary/20 hover:text-primary transition-all border border-transparent hover:border-primary/50">
+<span class="text-white text-xs font-bold group-hover:text-primary">Region: Australia &amp; NZ</span>
+<span class="material-symbols-outlined text-white text-[16px] group-hover:text-primary">expand_more</span>
+</button>
+<button class="group flex h-9 items-center gap-2 rounded-full bg-[#283933] px-4 hover:bg-primary/20 hover:text-primary transition-all border border-transparent hover:border-primary/50">
+<span class="text-white text-xs font-bold group-hover:text-primary">Framework: AASB (S1 &amp; S2)</span>
+<span class="material-symbols-outlined text-white text-[16px] group-hover:text-primary">expand_more</span>
+</button>
+<button class="group flex h-9 items-center gap-2 rounded-full bg-[#283933] px-4 hover:bg-primary/20 hover:text-primary transition-all border border-transparent hover:border-primary/50">
+<span class="text-white text-xs font-bold group-hover:text-primary">Year: FY2024</span>
+<span class="material-symbols-outlined text-white text-[16px] group-hover:text-primary">expand_more</span>
+</button>
+<div class="h-9 w-[1px] bg-[#283933] mx-2"></div>
+<button class="text-[#9db9b0] text-xs font-medium hover:text-white underline decoration-dashed">Clear Filters</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="p-5 rounded-xl bg-[#1d2a25] border border-[#283933] hover:border-primary/30 transition-colors group">
+<div class="flex justify-between items-start mb-2">
+<p class="text-[#9db9b0] text-sm font-medium">Total Emissions (S1+S2)</p>
+<span class="material-symbols-outlined text-[#3b82f6] bg-[#3b82f6]/10 rounded p-1 text-[20px]">cloud_off</span>
+</div>
+<p class="text-white text-2xl font-bold mb-1">42.5k <span class="text-base text-[#9db9b0] font-normal">tCO2e</span></p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]">trending_down</span>
+<span class="text-primary text-xs font-bold">-8.4%</span>
+<span class="text-[#5c736a] text-xs ml-1">vs Baseline (2020)</span>
+</div>
+</div>
+<div class="p-5 rounded-xl bg-[#1d2a25] border border-[#283933] hover:border-primary/30 transition-colors">
+<div class="flex justify-between items-start mb-2">
+<p class="text-[#9db9b0] text-sm font-medium">Renewable Energy Mix</p>
+<span class="material-symbols-outlined text-[#eab308] bg-[#eab308]/10 rounded p-1 text-[20px]">solar_power</span>
+</div>
+<p class="text-white text-2xl font-bold mb-1">45.2%</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]">arrow_upward</span>
+<span class="text-primary text-xs font-bold">+12%</span>
+<span class="text-[#5c736a] text-xs ml-1">YoY Increase</span>
+</div>
+</div>
+<div class="p-5 rounded-xl bg-[#1d2a25] border border-[#283933] hover:border-primary/30 transition-colors">
+<div class="flex justify-between items-start mb-2">
+<p class="text-[#9db9b0] text-sm font-medium">Compliance Readiness</p>
+<span class="material-symbols-outlined text-primary bg-primary/10 rounded p-1 text-[20px]">fact_check</span>
+</div>
+<p class="text-white text-2xl font-bold mb-1">78<span class="text-[#9db9b0] text-xl font-normal">%</span></p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[#eab308] text-[16px]">warning</span>
+<span class="text-[#eab308] text-xs font-bold">5 Gaps</span>
+<span class="text-[#5c736a] text-xs ml-1">Critical (S2)</span>
+</div>
+</div>
+<div class="p-5 rounded-xl bg-[#1d2a25] border border-[#283933] hover:border-primary/30 transition-colors">
+<div class="flex justify-between items-start mb-2">
+<p class="text-[#9db9b0] text-sm font-medium">Transition CAPEX</p>
+<span class="material-symbols-outlined text-[#f97316] bg-[#f97316]/10 rounded p-1 text-[20px]">currency_exchange</span>
+</div>
+<p class="text-white text-2xl font-bold mb-1">$12.4M</p>
+<div class="flex items-center gap-1">
+<span class="text-[#5c736a] text-xs">Allocated for 2024 Transition Plan</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+<div class="xl:col-span-2 rounded-xl bg-[#1d2a25] border border-[#283933] p-6 flex flex-col">
+<div class="flex justify-between items-center mb-6">
+<div>
+<h3 class="text-white text-lg font-bold">Net Zero Transition Plan</h3>
+<p class="text-[#9db9b0] text-xs">Decarbonization Pathway vs. BAU Scenario (Scope 1 &amp; 2)</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<span class="size-2.5 rounded-sm bg-[#3b82f6]"></span>
+<span class="text-[#9db9b0] text-xs">Actual Emissions</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="size-2.5 rounded-sm bg-[#283933] border border-white/20"></span>
+<span class="text-[#9db9b0] text-xs">Target Pathway</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="size-2.5 rounded-full bg-primary/20 border border-primary"></span>
+<span class="text-[#9db9b0] text-xs">Interim Targets</span>
+</div>
+</div>
+</div>
+<div class="relative w-full h-72 flex-1 mt-4">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 800 250">
+<line stroke="#283933" stroke-dasharray="4" x1="0" x2="800" y1="0" y2="0"></line>
+<line stroke="#283933" stroke-dasharray="4" x1="0" x2="800" y1="62.5" y2="62.5"></line>
+<line stroke="#283933" stroke-dasharray="4" x1="0" x2="800" y1="125" y2="125"></line>
+<line stroke="#283933" stroke-dasharray="4" x1="0" x2="800" y1="187.5" y2="187.5"></line>
+<line stroke="#283933" x1="0" x2="800" y1="250" y2="250"></line>
+<path d="M0,50 L800,220 V250 H0 Z" fill="url(#gradientGreen)" opacity="0.1"></path>
+<path d="M0,50 Q400,40 800,30" fill="none" stroke="#64748b" stroke-dasharray="6,4" stroke-width="2"></path>
+<text fill="#64748b" font-size="10" x="760" y="25">BAU Scenario</text>
+<path d="M0,50 C200,80 500,180 800,220" fill="none" stroke="#13eca4" stroke-width="2"></path>
+<text fill="#13eca4" font-size="10" x="750" y="210">Net Zero 2050</text>
+<rect fill="#3b82f6" height="190" rx="2" width="40" x="20" y="60"></rect>
+<rect fill="#3b82f6" height="180" rx="2" width="40" x="120" y="70"></rect>
+<rect fill="#3b82f6" height="165" rx="2" width="40" x="220" y="85"></rect>
+<rect fill="#3b82f6" height="140" rx="2" width="40" x="320" y="110"></rect>
+<rect fill="#3b82f6" fill-opacity="0.5" height="120" rx="2" stroke="#3b82f6" stroke-dasharray="4" stroke-width="1" width="40" x="420" y="130"></rect>
+<circle cx="440" cy="130" fill="#111816" r="4" stroke="#13eca4" stroke-width="2"></circle>
+<circle cx="640" cy="185" fill="#111816" r="4" stroke="#13eca4" stroke-width="2"></circle>
+<defs>
+<lineargradient id="gradientGreen" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#13eca4;stop-opacity:0.3"></stop>
+<stop offset="100%" style="stop-color:#13eca4;stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+</svg>
+<div class="flex justify-between mt-4 px-6 text-[#9db9b0] text-xs font-mono">
+<span class="w-10 text-center">2020</span>
+<span class="w-10 text-center">2021</span>
+<span class="w-10 text-center">2022</span>
+<span class="w-10 text-center">2023</span>
+<span class="w-10 text-center font-bold text-primary">2024</span>
+<span class="w-10 text-center text-white/40">2026</span>
+<span class="w-10 text-center text-white/40">2028</span>
+<span class="w-10 text-center text-white/40">2030</span>
+</div>
+</div>
+</div>
+<div class="rounded-xl bg-[#1d2a25] border border-[#283933] p-6 flex flex-col">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-white text-lg font-bold">2030 Climate Targets</h3>
+<button class="text-primary text-xs font-bold hover:underline">Full List</button>
+</div>
+<div class="flex flex-col gap-6 flex-1">
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-end">
+<span class="text-white text-sm font-medium">Scope 1 &amp; 2 Reduction</span>
+<span class="text-primary text-xs font-bold">42% / 50%</span>
+</div>
+<div class="w-full bg-[#111816] rounded-full h-2.5 overflow-hidden">
+<div class="bg-primary h-2.5 rounded-full" style="width: 84%"></div>
+</div>
+<div class="flex justify-between text-[10px] text-[#5c736a] mt-0.5">
+<span>Baseline 2020</span>
+<span>Target 2030</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-end">
+<span class="text-white text-sm font-medium">Renewable Electricity</span>
+<span class="text-[#eab308] text-xs font-bold">45% / 100%</span>
+</div>
+<div class="w-full bg-[#111816] rounded-full h-2.5 overflow-hidden">
+<div class="bg-[#eab308] h-2.5 rounded-full" style="width: 45%"></div>
+</div>
+<div class="flex justify-between text-[10px] text-[#5c736a] mt-0.5">
+<span>Current</span>
+<span>Target 2028</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-end">
+<span class="text-white text-sm font-medium">Supplier Engagement (Scope 3)</span>
+<span class="text-[#f97316] text-xs font-bold">15% / 70%</span>
+</div>
+<div class="w-full bg-[#111816] rounded-full h-2.5 overflow-hidden">
+<div class="bg-[#f97316] h-2.5 rounded-full" style="width: 21%"></div>
+</div>
+<div class="flex justify-between text-[10px] text-[#5c736a] mt-0.5">
+<span>Current</span>
+<span>Target 2030</span>
+</div>
+</div>
+<div class="mt-auto p-3 rounded-lg bg-[#283933]/50 border border-[#f97316]/20 flex gap-3 items-start">
+<span class="material-symbols-outlined text-[#f97316] text-lg mt-0.5">warning</span>
+<div>
+<p class="text-white text-xs font-bold">Target At Risk</p>
+<p class="text-[#9db9b0] text-[10px] leading-relaxed">Scope 3 data collection is behind schedule. Requires supplier audit acceleration.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-4 gap-6">
+<div class="xl:col-span-1 rounded-xl bg-[#1d2a25] border border-[#283933] p-0 overflow-hidden flex flex-col">
+<div class="p-5 border-b border-[#283933] bg-[#1d2a25]">
+<h3 class="text-white text-lg font-bold">Pillars of Compliance</h3>
+</div>
+<div class="flex flex-col divide-y divide-[#283933]">
+<div class="flex items-center justify-between p-4 hover:bg-[#283933]/50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="bg-primary/20 text-primary p-1.5 rounded-md">
+<span class="material-symbols-outlined text-sm">gavel</span>
+</div>
+<div>
+<p class="text-white text-sm font-bold">Governance</p>
+<p class="text-[#9db9b0] text-[10px]">Oversight Bodies</p>
+</div>
+</div>
+<span class="text-primary text-xs font-bold bg-primary/10 px-2 py-1 rounded">100%</span>
+</div>
+<div class="flex items-center justify-between p-4 hover:bg-[#283933]/50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="bg-[#3b82f6]/20 text-[#3b82f6] p-1.5 rounded-md">
+<span class="material-symbols-outlined text-sm">lightbulb</span>
+</div>
+<div>
+<p class="text-white text-sm font-bold">Strategy</p>
+<p class="text-[#9db9b0] text-[10px]">Scenario Analysis</p>
+</div>
+</div>
+<span class="text-[#3b82f6] text-xs font-bold bg-[#3b82f6]/10 px-2 py-1 rounded">85%</span>
+</div>
+<div class="flex items-center justify-between p-4 hover:bg-[#283933]/50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="bg-[#f97316]/20 text-[#f97316] p-1.5 rounded-md">
+<span class="material-symbols-outlined text-sm">shield</span>
+</div>
+<div>
+<p class="text-white text-sm font-bold">Risk Mgmt</p>
+<p class="text-[#9db9b0] text-[10px]">Identification</p>
+</div>
+</div>
+<span class="text-[#f97316] text-xs font-bold bg-[#f97316]/10 px-2 py-1 rounded">Review</span>
+</div>
+<div class="flex items-center justify-between p-4 hover:bg-[#283933]/50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="bg-gray-700/50 text-gray-400 p-1.5 rounded-md">
+<span class="material-symbols-outlined text-sm">target</span>
+</div>
+<div>
+<p class="text-white text-sm font-bold">Metrics</p>
+<p class="text-[#9db9b0] text-[10px]">GHG &amp; Targets</p>
+</div>
+</div>
+<span class="text-gray-400 text-xs font-bold bg-gray-700/30 px-2 py-1 rounded">Pending</span>
+</div>
+</div>
+</div>
+<div class="xl:col-span-3 rounded-xl bg-[#1d2a25] border border-[#283933] overflow-hidden flex flex-col">
+<div class="flex items-center justify-between p-5 border-b border-[#283933]">
+<h3 class="text-white text-lg font-bold">Reporting Status: Detailed Requirements</h3>
+<div class="flex gap-2">
+<button class="flex items-center gap-1 text-[#9db9b0] text-xs hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm">download</span> Export
+                                    </button>
+<button class="flex items-center gap-1 text-[#9db9b0] text-xs hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm">filter_list</span> Filter
+                                    </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-[#111816]">
+<th class="p-4 text-xs font-bold text-[#9db9b0] uppercase tracking-wider">Ref ID</th>
+<th class="p-4 text-xs font-bold text-[#9db9b0] uppercase tracking-wider">Disclosure Topic</th>
+<th class="p-4 text-xs font-bold text-[#9db9b0] uppercase tracking-wider">Category</th>
+<th class="p-4 text-xs font-bold text-[#9db9b0] uppercase tracking-wider">Data Owner</th>
+<th class="p-4 text-xs font-bold text-[#9db9b0] uppercase tracking-wider">Status</th>
+<th class="p-4 text-xs font-bold text-[#9db9b0] uppercase tracking-wider text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#283933] text-sm text-white">
+<tr class="hover:bg-[#283933]/50 transition-colors">
+<td class="p-4 font-mono text-[#cbd5e1] text-xs">AASB S2-29</td>
+<td class="p-4 font-bold">
+                                                Scope 1, 2, 3 GHG Emissions
+                                            </td>
+<td class="p-4 text-[#9db9b0]">Metrics &amp; Targets</td>
+<td class="p-4 flex items-center gap-2">
+<div class="size-5 rounded-full bg-slate-600 flex items-center justify-center text-[10px] font-bold">OP</div> Operations
+                                            </td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-xs font-bold bg-primary/10 text-primary border border-primary/20">
+<span class="size-1.5 rounded-full bg-primary"></span> Verified
+                                                </span>
+</td>
+<td class="p-4 text-right">
+<button class="text-[#9db9b0] hover:text-white"><span class="material-symbols-outlined">edit_document</span></button>
+</td>
+</tr>
+<tr class="hover:bg-[#283933]/50 transition-colors">
+<td class="p-4 font-mono text-[#cbd5e1] text-xs">AASB S2-15</td>
+<td class="p-4 font-bold">
+                                                Climate Resilience Assessment
+                                            </td>
+<td class="p-4 text-[#9db9b0]">Strategy</td>
+<td class="p-4 flex items-center gap-2">
+<div class="size-5 rounded-full bg-slate-600 flex items-center justify-center text-[10px] font-bold">SU</div> Sustain.
+                                            </td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-xs font-bold bg-[#3b82f6]/10 text-[#3b82f6] border border-[#3b82f6]/20">
+<span class="size-1.5 rounded-full bg-[#3b82f6]"></span> In Draft
+                                                </span>
+</td>
+<td class="p-4 text-right">
+<button class="text-[#9db9b0] hover:text-white"><span class="material-symbols-outlined">edit_document</span></button>
+</td>
+</tr>
+<tr class="hover:bg-[#283933]/50 transition-colors">
+<td class="p-4 font-mono text-[#cbd5e1] text-xs">AASB S1-25</td>
+<td class="p-4 font-bold">
+                                                Risk Management Processes
+                                            </td>
+<td class="p-4 text-[#9db9b0]">Risk Mgmt</td>
+<td class="p-4 flex items-center gap-2">
+<div class="size-5 rounded-full bg-slate-600 flex items-center justify-center text-[10px] font-bold">LE</div> Legal
+                                            </td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-xs font-bold bg-[#f97316]/10 text-[#f97316] border border-[#f97316]/20">
+<span class="size-1.5 rounded-full bg-[#f97316]"></span> Review
+                                                </span>
+</td>
+<td class="p-4 text-right">
+<button class="text-[#9db9b0] hover:text-white"><span class="material-symbols-outlined">edit_document</span></button>
+</td>
+</tr>
+<tr class="hover:bg-[#283933]/50 transition-colors">
+<td class="p-4 font-mono text-[#cbd5e1] text-xs">AASB S2-08</td>
+<td class="p-4 font-bold text-white/50">
+                                                Transition Plan (Voluntary)
+                                            </td>
+<td class="p-4 text-[#9db9b0]">Strategy</td>
+<td class="p-4 flex items-center gap-2">
+<div class="size-5 rounded-full bg-slate-600 flex items-center justify-center text-[10px] font-bold">EX</div> Exec
+                                            </td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-xs font-bold bg-white/5 text-[#9db9b0] border border-white/10">
+<span class="size-1.5 rounded-full bg-[#9db9b0]"></span> Pending
+                                                </span>
+</td>
+<td class="p-4 text-right">
+<button class="text-[#9db9b0] hover:text-white"><span class="material-symbols-outlined">edit_document</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

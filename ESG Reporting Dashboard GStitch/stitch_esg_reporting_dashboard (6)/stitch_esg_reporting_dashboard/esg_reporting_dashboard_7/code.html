@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CSRD Compliance Overview</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13eca4",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#111816",
+                        "surface-dark": "#1d2a25",
+                        "surface-highlight": "#283933",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem", 
+                        "lg": "0.75rem", 
+                        "xl": "1rem", 
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white overflow-hidden">
+<div class="flex h-screen w-full overflow-hidden">
+<aside class="hidden lg:flex w-72 flex-col border-r border-[#283933] bg-background-dark p-4">
+<div class="flex items-center gap-3 px-2 mb-8 mt-2">
+<div class="flex items-center justify-center size-10 rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-2xl">eco</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-white text-lg font-bold leading-normal">ESG Nexus</h1>
+<p class="text-[#9db9b0] text-xs font-medium uppercase tracking-wider">Global Platform</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 flex-1">
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-[#9db9b0] hover:bg-[#283933] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-[#9db9b0] hover:bg-[#283933] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">description</span>
+<p class="text-sm font-medium">Reports</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-[#9db9b0] hover:bg-[#283933] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">scatter_plot</span>
+<p class="text-sm font-medium">Materiality</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg bg-primary/10 border-l-4 border-primary" href="#">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<p class="text-white text-sm font-bold">Compliance</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-[#9db9b0] hover:bg-[#283933] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<p class="text-sm font-medium">Data Entry</p>
+</a>
+</nav>
+<div class="mt-auto pt-4 border-t border-[#283933]">
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-[#9db9b0] hover:bg-[#283933] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium">Settings</p>
+</a>
+<div class="flex items-center gap-3 px-3 py-4 mt-2">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 ring-2 ring-[#283933]" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCr0efW_guDPRZA6ziV__PKvvJzSLWzSz-p0E9H5cHUXmwYUBEc4uHhcziCKof522jrmcpZ1Pv1cPMhgtfHTCROmFpcZ-fPDTF9QX5DWyHP7KbNTD-NXnsEGTZy47IiMN6XhBbMD_KfKYBmSK80DIXDobiI1_QzArt2My6O5kjuYdWDY9-7Wa7pZwyfZdx0S43Wu3WOTbfOFqRhWJkC2oaigmxTYP7DHZWB0vA2iUZV3crSfKuk6YVTNzwpLHB9KPVY-lqpY5XvUdlh");'></div>
+<div class="flex flex-col">
+<p class="text-white text-sm font-bold">Alex Morgan</p>
+<p class="text-[#9db9b0] text-xs">Sustainability Lead</p>
+</div>
+</div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col h-full overflow-hidden bg-background-dark relative">
+<header class="flex items-center justify-between border-b border-[#283933] px-6 py-4 bg-background-dark z-20">
+<div class="flex items-center gap-4 lg:hidden">
+<button class="text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h2 class="text-white text-lg font-bold">ESG Nexus</h2>
+</div>
+<h2 class="hidden lg:block text-white text-xl font-bold tracking-tight">CSRD Compliance Overview</h2>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center h-10 rounded-lg bg-[#283933] px-3 min-w-[300px]">
+<span class="material-symbols-outlined text-[#9db9b0]">search</span>
+<input class="bg-transparent border-none text-white text-sm ml-2 w-full focus:ring-0 placeholder-[#9db9b0]" placeholder="Search ESRS standards, data points..." type="text"/>
+</div>
+<div class="flex gap-2">
+<button class="flex items-center justify-center size-10 rounded-lg bg-[#283933] text-white hover:bg-[#344a42] transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-primary rounded-full border border-[#283933]"></span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-lg bg-[#283933] text-white hover:bg-[#344a42] transition-colors">
+<span class="material-symbols-outlined">help</span>
+</button>
+<button class="hidden md:flex items-center gap-2 h-10 px-4 rounded-lg bg-primary text-background-dark font-bold text-sm hover:bg-[#10d692] transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>Generate CSRD Report</span>
+</button>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-4 lg:p-8 scrollbar-hide">
+<div class="max-w-[1400px] mx-auto flex flex-col gap-6">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-2">
+<div class="flex flex-wrap gap-3">
+<button class="group flex h-9 items-center gap-2 rounded-full bg-[#283933] px-4 hover:bg-primary/20 hover:text-primary transition-all border border-transparent hover:border-primary/50">
+<span class="text-white text-xs font-bold group-hover:text-primary">Entity: Group Level</span>
+<span class="material-symbols-outlined text-white text-[16px] group-hover:text-primary">expand_more</span>
+</button>
+<button class="group flex h-9 items-center gap-2 rounded-full bg-[#283933] px-4 hover:bg-primary/20 hover:text-primary transition-all border border-transparent hover:border-primary/50">
+<span class="text-white text-xs font-bold group-hover:text-primary">Year: 2024</span>
+<span class="material-symbols-outlined text-white text-[16px] group-hover:text-primary">expand_more</span>
+</button>
+<button class="group flex h-9 items-center gap-2 rounded-full bg-[#283933] px-4 hover:bg-primary/20 hover:text-primary transition-all border border-transparent hover:border-primary/50">
+<span class="text-white text-xs font-bold group-hover:text-primary">Scope: All ESRS</span>
+<span class="material-symbols-outlined text-white text-[16px] group-hover:text-primary">expand_more</span>
+</button>
+</div>
+<div class="flex items-center gap-2 text-xs text-[#9db9b0]">
+<span>Last Updated: Today, 09:41 AM</span>
+<span class="size-1.5 rounded-full bg-primary"></span>
+<span class="text-primary font-bold">Sync Active</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="p-5 rounded-xl bg-[#1d2a25] border border-[#283933] hover:border-primary/30 transition-colors group relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
+<div class="flex justify-between items-start mb-2 relative z-10">
+<p class="text-[#9db9b0] text-sm font-medium">Overall Readiness</p>
+<span class="material-symbols-outlined text-primary bg-primary/10 rounded p-1 text-[20px]">donut_large</span>
+</div>
+<p class="text-white text-2xl font-bold mb-1 relative z-10">72% <span class="text-base text-[#9db9b0] font-normal">Compliant</span></p>
+<div class="w-full bg-[#283933] h-1.5 rounded-full mt-2 mb-2">
+<div class="bg-primary h-1.5 rounded-full" style="width: 72%"></div>
+</div>
+<div class="flex items-center gap-1 relative z-10">
+<span class="text-primary text-xs font-bold">+8%</span>
+<span class="text-[#5c736a] text-xs ml-1">since last month</span>
+</div>
+</div>
+<div class="p-5 rounded-xl bg-[#1d2a25] border border-[#283933] hover:border-primary/30 transition-colors">
+<div class="flex justify-between items-start mb-2">
+<p class="text-[#9db9b0] text-sm font-medium">ESRS Data Points</p>
+<span class="material-symbols-outlined text-[#3b82f6] bg-[#3b82f6]/10 rounded p-1 text-[20px]">data_check</span>
+</div>
+<div class="flex items-baseline gap-1 mb-1">
+<p class="text-white text-2xl font-bold">845</p>
+<p class="text-[#9db9b0] text-sm">/ 1,144</p>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-[#3b82f6]/20 text-[#3b82f6] text-[10px] font-bold px-1.5 py-0.5 rounded">74% Collected</span>
+</div>
+<div class="mt-2 text-[#5c736a] text-xs">
+                                299 pending collection
+                            </div>
+</div>
+<div class="p-5 rounded-xl bg-[#1d2a25] border border-[#283933] hover:border-primary/30 transition-colors">
+<div class="flex justify-between items-start mb-2">
+<p class="text-[#9db9b0] text-sm font-medium">Material Topics</p>
+<span class="material-symbols-outlined text-[#eab308] bg-[#eab308]/10 rounded p-1 text-[20px]">priority_high</span>
+</div>
+<p class="text-white text-2xl font-bold mb-1">14 <span class="text-base text-[#9db9b0] font-normal">Identified</span></p>
+<div class="flex items-center gap-2 mt-2">
+<div class="flex items-center gap-1">
+<span class="size-2 rounded-full bg-[#eab308]"></span>
+<span class="text-[#9db9b0] text-xs">8 Env</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="size-2 rounded-full bg-[#f97316]"></span>
+<span class="text-[#9db9b0] text-xs">4 Soc</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="size-2 rounded-full bg-[#3b82f6]"></span>
+<span class="text-[#9db9b0] text-xs">2 Gov</span>
+</div>
+</div>
+</div>
+<div class="p-5 rounded-xl bg-[#1d2a25] border border-[#283933] hover:border-primary/30 transition-colors">
+<div class="flex justify-between items-start mb-2">
+<p class="text-[#9db9b0] text-sm font-medium">Assurance Status</p>
+<span class="material-symbols-outlined text-[#f97316] bg-[#f97316]/10 rounded p-1 text-[20px]">verified</span>
+</div>
+<p class="text-white text-2xl font-bold mb-1">Limited</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[#f97316] text-[16px]">hourglass_top</span>
+<span class="text-[#f97316] text-xs font-bold">Audit in Progress</span>
+</div>
+<div class="w-full bg-[#283933] h-1.5 rounded-full mt-2">
+<div class="bg-[#f97316] h-1.5 rounded-full" style="width: 45%"></div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+<div class="xl:col-span-2 flex flex-col gap-6">
+<div class="rounded-xl bg-[#1d2a25] border border-[#283933] p-6 flex flex-col h-full">
+<div class="flex justify-between items-center mb-6">
+<div>
+<h3 class="text-white text-lg font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">co2</span>
+                                    Climate Targets &amp; Trajectory (ESRS E1)
+                                </h3>
+<p class="text-[#9db9b0] text-xs mt-1">Scope 1, 2, and 3 GHG Emissions vs. Net-Zero Pathway</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-2 text-xs">
+<span class="size-2 rounded-full bg-[#3b82f6]"></span> <span class="text-[#9db9b0]">Actuals</span>
+</div>
+<div class="flex items-center gap-2 text-xs">
+<span class="size-2 rounded-full bg-primary"></span> <span class="text-[#9db9b0]">Target</span>
+</div>
+</div>
+</div>
+<div class="relative h-64 w-full mb-8 px-2">
+<div class="absolute inset-0 flex flex-col justify-between text-[#5c736a] text-[10px] pointer-events-none z-0">
+<div class="w-full border-b border-[#283933]/50 pb-1">50k tCO2e</div>
+<div class="w-full border-b border-[#283933]/50 pb-1">30k tCO2e</div>
+<div class="w-full border-b border-[#283933]/50 pb-1">10k tCO2e</div>
+<div class="w-full border-b border-[#283933] pb-1">0</div>
+</div>
+<div class="absolute inset-0 flex items-end justify-between pl-12 pr-4 pb-4 z-10 gap-4">
+<div class="flex flex-col items-center gap-2 w-full group">
+<div class="w-full max-w-[40px] bg-[#3b82f6]/40 h-[80%] rounded-t-sm relative group-hover:bg-[#3b82f6]/60 transition-colors">
+<div class="absolute bottom-0 w-full bg-[#3b82f6] h-[60%] rounded-t-sm"></div>
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-white text-[10px] opacity-0 group-hover:opacity-100 transition-opacity font-bold">42.5k</div>
+</div>
+<span class="text-[#9db9b0] text-xs">2021</span>
+</div>
+<div class="flex flex-col items-center gap-2 w-full group">
+<div class="w-full max-w-[40px] bg-[#3b82f6]/40 h-[75%] rounded-t-sm relative group-hover:bg-[#3b82f6]/60 transition-colors">
+<div class="absolute bottom-0 w-full bg-[#3b82f6] h-[65%] rounded-t-sm"></div>
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-white text-[10px] opacity-0 group-hover:opacity-100 transition-opacity font-bold">39.8k</div>
+</div>
+<span class="text-[#9db9b0] text-xs">2022</span>
+</div>
+<div class="flex flex-col items-center gap-2 w-full group">
+<div class="w-full max-w-[40px] bg-[#3b82f6]/40 h-[65%] rounded-t-sm relative group-hover:bg-[#3b82f6]/60 transition-colors">
+<div class="absolute bottom-0 w-full bg-[#3b82f6] h-[70%] rounded-t-sm"></div>
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-white text-[10px] opacity-0 group-hover:opacity-100 transition-opacity font-bold">34.2k</div>
+</div>
+<span class="text-[#9db9b0] text-xs">2023</span>
+</div>
+<div class="flex flex-col items-center gap-2 w-full group relative">
+<div class="absolute -top-2 text-primary text-[10px] font-bold bg-primary/10 px-1.5 rounded border border-primary/20">NOW</div>
+<div class="w-full max-w-[40px] bg-[#3b82f6]/40 h-[55%] rounded-t-sm relative group-hover:bg-[#3b82f6]/60 transition-colors border-t-2 border-white/50">
+<div class="absolute bottom-0 w-full bg-[#3b82f6] h-[75%] rounded-t-sm"></div>
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-white text-[10px] opacity-0 group-hover:opacity-100 transition-opacity font-bold">28.9k</div>
+</div>
+<span class="text-white font-bold text-xs">2024</span>
+</div>
+<div class="flex flex-col items-center gap-2 w-full group">
+<div class="w-full max-w-[40px] border-2 border-dashed border-primary/50 h-[45%] rounded-t-sm relative bg-primary/5">
+<div class="absolute top-0 w-full h-0.5 bg-primary shadow-[0_0_10px_rgba(19,236,164,0.5)]"></div>
+</div>
+<span class="text-primary text-xs font-bold">2025</span>
+</div>
+<div class="flex flex-col items-center gap-2 w-full group">
+<div class="w-full max-w-[40px] border-2 border-dashed border-primary/50 h-[20%] rounded-t-sm relative bg-primary/5">
+<div class="absolute top-0 w-full h-0.5 bg-primary shadow-[0_0_10px_rgba(19,236,164,0.5)]"></div>
+</div>
+<span class="text-primary text-xs font-bold">2030</span>
+</div>
+</div>
+<svg class="absolute inset-0 w-full h-full pointer-events-none pl-12 pr-4 pb-4 opacity-50 z-0">
+<path d="M 50 180 Q 200 140 350 120 T 550 50" fill="none" stroke="#13eca4" stroke-dasharray="4 4" stroke-width="2"></path>
+</svg>
+</div>
+<div class="border-t border-[#283933] pt-6">
+<div class="flex justify-between items-center mb-4">
+<h4 class="text-white text-sm font-bold">Transition Plan Roadmap (E1-1)</h4>
+<button class="text-primary text-xs hover:underline">View Full Plan</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-[#111816] p-3 rounded-lg border border-[#283933] flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<span class="text-xs font-bold text-white">Renewable Energy</span>
+<span class="px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-500 text-[10px] font-bold">On Track</span>
+</div>
+<p class="text-[#9db9b0] text-[10px] leading-tight">Switch 80% of mfg sites to renewable sources by Q4 2024.</p>
+<div class="mt-auto">
+<div class="flex justify-between text-[10px] text-[#9db9b0] mb-1">
+<span>Progress</span>
+<span>65%</span>
+</div>
+<div class="w-full h-1 bg-[#283933] rounded-full">
+<div class="h-1 bg-emerald-500 rounded-full" style="width: 65%"></div>
+</div>
+</div>
+</div>
+<div class="bg-[#111816] p-3 rounded-lg border border-[#283933] flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<span class="text-xs font-bold text-white">EV Fleet Transition</span>
+<span class="px-1.5 py-0.5 rounded bg-orange-500/20 text-orange-500 text-[10px] font-bold">Delayed</span>
+</div>
+<p class="text-[#9db9b0] text-[10px] leading-tight">Replace 40% of logistics fleet with electric vehicles.</p>
+<div class="mt-auto">
+<div class="flex justify-between text-[10px] text-[#9db9b0] mb-1">
+<span>Progress</span>
+<span>22%</span>
+</div>
+<div class="w-full h-1 bg-[#283933] rounded-full">
+<div class="h-1 bg-orange-500 rounded-full" style="width: 22%"></div>
+</div>
+</div>
+</div>
+<div class="bg-[#111816] p-3 rounded-lg border border-[#283933] flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<span class="text-xs font-bold text-white">Supplier Engagement</span>
+<span class="px-1.5 py-0.5 rounded bg-blue-500/20 text-blue-500 text-[10px] font-bold">Started</span>
+</div>
+<p class="text-[#9db9b0] text-[10px] leading-tight">Launch Scope 3 data collection portal for Top 100 suppliers.</p>
+<div class="mt-auto">
+<div class="flex justify-between text-[10px] text-[#9db9b0] mb-1">
+<span>Progress</span>
+<span>10%</span>
+</div>
+<div class="w-full h-1 bg-[#283933] rounded-full">
+<div class="h-1 bg-blue-500 rounded-full" style="width: 10%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="xl:col-span-1 flex flex-col gap-6">
+<div class="rounded-xl bg-[#1d2a25] border border-[#283933] p-0 overflow-hidden">
+<div class="p-5 border-b border-[#283933] flex justify-between items-center">
+<h3 class="text-white text-lg font-bold">Major ESG KPIs</h3>
+<span class="material-symbols-outlined text-[#9db9b0]">more_horiz</span>
+</div>
+<div class="flex flex-col divide-y divide-[#283933]">
+<div class="p-4 flex items-center justify-between group hover:bg-[#283933]/50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm">bolt</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs text-[#9db9b0]">Energy Intensity</span>
+<span class="text-white font-bold text-sm">142 <span class="text-[10px] font-normal text-[#5c736a]">kWh/m²</span></span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-emerald-500 text-xs font-bold flex items-center justify-end"><span class="material-symbols-outlined text-[14px]">arrow_downward</span> 4.2%</span>
+<span class="text-[#5c736a] text-[10px]">YoY</span>
+</div>
+</div>
+<div class="p-4 flex items-center justify-between group hover:bg-[#283933]/50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-blue-500/10 flex items-center justify-center text-blue-500">
+<span class="material-symbols-outlined text-sm">water_drop</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs text-[#9db9b0]">Water Usage</span>
+<span class="text-white font-bold text-sm">2.4 <span class="text-[10px] font-normal text-[#5c736a]">ML</span></span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-red-500 text-xs font-bold flex items-center justify-end"><span class="material-symbols-outlined text-[14px]">arrow_upward</span> 1.8%</span>
+<span class="text-[#5c736a] text-[10px]">YoY</span>
+</div>
+</div>
+<div class="p-4 flex items-center justify-between group hover:bg-[#283933]/50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-orange-500/10 flex items-center justify-center text-orange-500">
+<span class="material-symbols-outlined text-sm">diversity_3</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs text-[#9db9b0]">Gender Pay Gap</span>
+<span class="text-white font-bold text-sm">2.1%</span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-emerald-500 text-xs font-bold flex items-center justify-end"><span class="material-symbols-outlined text-[14px]">arrow_downward</span> 0.5%</span>
+<span class="text-[#5c736a] text-[10px]">YoY</span>
+</div>
+</div>
+</div>
+</div>
+<div class="rounded-xl bg-[#1d2a25] border border-[#283933] p-5 flex flex-col flex-1">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-white text-sm font-bold">Double Materiality</h3>
+<button class="text-primary text-xs font-bold hover:underline bg-primary/10 px-2 py-1 rounded">Update</button>
+</div>
+<div class="relative flex-1 bg-[#111816] rounded-lg border border-[#283933] p-4 min-h-[200px] overflow-hidden">
+<div class="absolute inset-0 grid grid-cols-2 grid-rows-2">
+<div class="border-r border-b border-[#283933]/50"></div>
+<div class="border-b border-[#283933]/50 bg-red-500/5"></div>
+<div class="border-r border-[#283933]/50"></div>
+<div class=""></div>
+</div>
+<div class="absolute top-2 right-2 text-[10px] text-white/60 font-bold text-right leading-tight">MATERIAL<br/>Threshold</div>
+<div class="absolute top-[15%] right-[10%] group cursor-pointer z-20">
+<div class="size-4 rounded-full bg-primary border-2 border-[#1d2a25] shadow-lg flex items-center justify-center text-[8px] font-bold text-[#1d2a25]">E1</div>
+</div>
+<div class="absolute top-[25%] right-[20%] group cursor-pointer z-20">
+<div class="size-4 rounded-full bg-[#f97316] border-2 border-[#1d2a25] shadow-lg flex items-center justify-center text-[8px] font-bold text-[#1d2a25]">S1</div>
+</div>
+<div class="absolute top-[40%] right-[35%] group cursor-pointer z-20">
+<div class="size-4 rounded-full bg-[#3b82f6] border-2 border-[#1d2a25] shadow-lg flex items-center justify-center text-[8px] font-bold text-[#1d2a25]">G1</div>
+</div>
+<div class="absolute bottom-[30%] left-[40%] group cursor-pointer z-20">
+<div class="size-3 rounded-full bg-[#9db9b0] opacity-50 border border-[#1d2a25] shadow-lg"></div>
+</div>
+<div class="absolute -left-3 bottom-1/2 -rotate-90 translate-y-1/2 text-[9px] text-[#5c736a] whitespace-nowrap font-bold">Financial Materiality</div>
+<div class="absolute bottom-1 left-1/2 -translate-x-1/2 text-[9px] text-[#5c736a] font-bold">Impact Materiality</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-4 gap-6">
+<div class="xl:col-span-1 rounded-xl bg-[#1d2a25] border border-[#283933] p-0 overflow-hidden flex flex-col">
+<div class="p-5 border-b border-[#283933] bg-[#1d2a25] flex justify-between items-center">
+<h3 class="text-white text-lg font-bold">Action Required</h3>
+<span class="bg-red-500/20 text-red-500 text-xs font-bold px-2 py-0.5 rounded-full">3 Critical</span>
+</div>
+<div class="flex flex-col divide-y divide-[#283933] overflow-y-auto max-h-[400px]">
+<div class="p-4 hover:bg-[#283933]/50 transition-colors group cursor-pointer border-l-2 border-red-500 bg-red-500/5">
+<div class="flex justify-between items-start mb-1">
+<span class="text-xs font-bold text-red-400">E1-6 Gross Scopes</span>
+<span class="text-[10px] text-[#9db9b0]">Due in 2 days</span>
+</div>
+<p class="text-white text-sm font-medium mb-2">Scope 3 data incomplete for Logistics sector.</p>
+<button class="text-xs text-white bg-[#283933] px-2 py-1 rounded hover:bg-[#344a42] transition-colors w-full">Resolve Gap</button>
+</div>
+<div class="p-4 hover:bg-[#283933]/50 transition-colors group cursor-pointer border-l-2 border-orange-500">
+<div class="flex justify-between items-start mb-1">
+<span class="text-xs font-bold text-orange-400">S1-1 Policies</span>
+<span class="text-[10px] text-[#9db9b0]">Due in 1 week</span>
+</div>
+<p class="text-white text-sm font-medium">Missing policy document for gender pay gap remediation.</p>
+</div>
+<div class="p-4 hover:bg-[#283933]/50 transition-colors group cursor-pointer border-l-2 border-primary">
+<div class="flex justify-between items-start mb-1">
+<span class="text-xs font-bold text-primary">G1-3 Corruption</span>
+<span class="text-[10px] text-[#9db9b0]">Review needed</span>
+</div>
+<p class="text-white text-sm font-medium">Whistleblower protection procedures draft ready for approval.</p>
+</div>
+</div>
+</div>
+<div class="xl:col-span-3 rounded-xl bg-[#1d2a25] border border-[#283933] overflow-hidden flex flex-col">
+<div class="flex items-center justify-between p-5 border-b border-[#283933]">
+<h3 class="text-white text-lg font-bold">Disclosure Requirements Status</h3>
+<div class="flex gap-2">
+<div class="relative">
+<span class="absolute inset-y-0 left-0 flex items-center pl-2 text-[#9db9b0]">
+<span class="material-symbols-outlined text-sm">filter_alt</span>
+</span>
+<select class="bg-[#111816] border border-[#283933] text-white text-xs rounded-lg pl-8 pr-8 py-1.5 focus:ring-primary focus:border-primary appearance-none h-8">
+<option>All Standards</option>
+<option>Environment (E1-E5)</option>
+<option>Social (S1-S4)</option>
+<option>Governance (G1)</option>
+</select>
+</div>
+<button class="flex items-center gap-1 text-[#9db9b0] text-xs hover:text-white transition-colors bg-[#283933] px-3 py-1.5 rounded-lg h-8">
+<span class="material-symbols-outlined text-sm">download</span> Export XBRL
+                                    </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-[#111816]">
+<th class="p-4 text-xs font-bold text-[#9db9b0] uppercase tracking-wider w-[30%]">Disclosure Requirement</th>
+<th class="p-4 text-xs font-bold text-[#9db9b0] uppercase tracking-wider w-[15%]">Standard</th>
+<th class="p-4 text-xs font-bold text-[#9db9b0] uppercase tracking-wider w-[20%]">Status</th>
+<th class="p-4 text-xs font-bold text-[#9db9b0] uppercase tracking-wider w-[15%]">Owner</th>
+<th class="p-4 text-xs font-bold text-[#9db9b0] uppercase tracking-wider w-[20%] text-right">Last Modified</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#283933] text-sm text-white">
+<tr class="hover:bg-[#283933]/50 transition-colors cursor-pointer group">
+<td class="p-4">
+<div class="flex flex-col">
+<span class="font-bold text-white group-hover:text-primary transition-colors">Transition plan for climate change mitigation</span>
+<span class="text-xs text-[#5c736a]">Qualitative • Strategy</span>
+</div>
+</td>
+<td class="p-4">
+<span class="bg-primary/10 text-primary px-2 py-1 rounded text-xs font-bold border border-primary/20">ESRS E1-1</span>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+<span class="text-primary text-xs font-bold">Completed</span>
+</div>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<div class="size-6 rounded-full bg-indigo-500 text-[10px] flex items-center justify-center font-bold">JD</div>
+<span class="text-[#cbd5e1] text-xs">J. Doe</span>
+</div>
+</td>
+<td class="p-4 text-right text-[#9db9b0] text-xs font-mono">
+                                                Oct 24, 2024
+                                            </td>
+</tr>
+<tr class="hover:bg-[#283933]/50 transition-colors cursor-pointer group">
+<td class="p-4">
+<div class="flex flex-col">
+<span class="font-bold text-white group-hover:text-primary transition-colors">Policies related to pollution</span>
+<span class="text-xs text-[#5c736a]">Semi-Qualitative • Policies</span>
+</div>
+</td>
+<td class="p-4">
+<span class="bg-blue-500/10 text-blue-400 px-2 py-1 rounded text-xs font-bold border border-blue-500/20">ESRS E2-1</span>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-400 text-sm">edit_note</span>
+<span class="text-orange-400 text-xs font-bold">Drafting</span>
+</div>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<div class="size-6 rounded-full bg-rose-500 text-[10px] flex items-center justify-center font-bold">SM</div>
+<span class="text-[#cbd5e1] text-xs">S. Miller</span>
+</div>
+</td>
+<td class="p-4 text-right text-[#9db9b0] text-xs font-mono">
+                                                2 hours ago
+                                            </td>
+</tr>
+<tr class="hover:bg-[#283933]/50 transition-colors cursor-pointer group">
+<td class="p-4">
+<div class="flex flex-col">
+<span class="font-bold text-white group-hover:text-primary transition-colors">Workers in the value chain</span>
+<span class="text-xs text-[#5c736a]">Quantitative • Metrics</span>
+</div>
+</td>
+<td class="p-4">
+<span class="bg-orange-500/10 text-orange-400 px-2 py-1 rounded text-xs font-bold border border-orange-500/20">ESRS S2</span>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-red-400 text-sm">warning</span>
+<span class="text-red-400 text-xs font-bold">Data Gap</span>
+</div>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<div class="size-6 rounded-full bg-teal-500 text-[10px] flex items-center justify-center font-bold">AK</div>
+<span class="text-[#cbd5e1] text-xs">A. Kumar</span>
+</div>
+</td>
+<td class="p-4 text-right text-[#9db9b0] text-xs font-mono">
+                                                Pending
+                                            </td>
+</tr>
+<tr class="hover:bg-[#283933]/50 transition-colors cursor-pointer group">
+<td class="p-4">
+<div class="flex flex-col">
+<span class="font-bold text-white group-hover:text-primary transition-colors">Corporate culture</span>
+<span class="text-xs text-[#5c736a]">Qualitative • Governance</span>
+</div>
+</td>
+<td class="p-4">
+<span class="bg-purple-500/10 text-purple-400 px-2 py-1 rounded text-xs font-bold border border-purple-500/20">ESRS G1-1</span>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-400 text-sm">rate_review</span>
+<span class="text-blue-400 text-xs font-bold">In Review</span>
+</div>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<div class="size-6 rounded-full bg-emerald-500 text-[10px] flex items-center justify-center font-bold">EL</div>
+<span class="text-[#cbd5e1] text-xs">E. Lewis</span>
+</div>
+</td>
+<td class="p-4 text-right text-[#9db9b0] text-xs font-mono">
+                                                Yesterday
+                                            </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
