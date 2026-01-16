@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRSR XBRL Intelligence</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ionicons for icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>BRSR XBRL Intelligence</h1>
+            <p>Advanced ESG Metrics Extraction & Analysis Engine</p>
+        </header>
+
+        <main class="input-section glass">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="switchTab('url')">URL Fetch</button>
+                <button class="tab-btn" onclick="switchTab('file')">File Upload</button>
+            </div>
+
+            <!-- URL Input -->
+            <div id="url-input-group" class="input-group active">
+                <input type="text" id="url-input" class="input-field"
+                    placeholder="Enter NSE XBRL URL (e.g. https://nsearchives.nseindia.com/...)"
+                    value="https://nsearchives.nseindia.com/corporate/xbrl/BRSR_1467735_17062025071711_WEB.xml">
+                <button class="action-btn" onclick="processUrl()">
+                    <ion-icon name="cloud-download-outline"
+                        style="vertical-align: middle; margin-right: 8px;"></ion-icon>
+                    Extract ESG Metrics
+                </button>
+            </div>
+
+            <!-- File Input -->
+            <div id="file-input-group" class="input-group">
+                <label for="file-upload" class="input-file-label">
+                    <ion-icon name="document-text-outline" class="icon-upload"></ion-icon>
+                    <span>Click to upload XBRL/XML file</span>
+                    <input type="file" id="file-upload" accept=".xml,.xbrl" style="display: none"
+                        onchange="handleFileSelect(this)">
+                </label>
+                <div id="file-name-display" style="text-align: center; color: var(--primary-color);"></div>
+                <button class="action-btn" onclick="processFile()">
+                    <ion-icon name="scan-outline" style="vertical-align: middle; margin-right: 8px;"></ion-icon>
+                    Analyze Filing
+                </button>
+            </div>
+
+            <!-- Loader -->
+            <div id="loader" class="loader-container">
+                <div class="spinner"></div>
+                <p>Parsing XBRL structure and validating ESG data points...</p>
+            </div>
+        </main>
+
+        <!-- Results -->
+        <section id="results" class="results-section container glass">
+            <div class="export-actions">
+                <button class="export-btn" onclick="exportData('csv')">
+                    <ion-icon name="download-outline"></ion-icon> CSV
+                </button>
+                <button class="export-btn" onclick="exportData('json')">
+                    <ion-icon name="code-download-outline"></ion-icon> JSON
+                </button>
+            </div>
+
+            <div class="filter-controls glass">
+                <div class="filter-group">
+                    <label>Filter by Year</label>
+                    <select id="year-filter" onchange="applyFilters()">
+                        <option value="all">All Years</option>
+                    </select>
+                </div>
+                <div class="filter-group" style="flex: 2;">
+                    <label>Filter by Indicator (Multi-select)</label>
+                    <div class="custom-multiselect" id="indicator-multiselect">
+                        <div class="selected-options" onclick="toggleIndicatorDropdown()">
+                            <span id="indicator-summary">All Indicators</span>
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </div>
+                        <div class="dropdown-options glass" id="indicator-options">
+                            <input type="text" id="indicator-search" placeholder="Search indicators..."
+                                onkeyup="filterIndicators()">
+                            <div class="option-list" id="indicator-list">
+                                <!-- Checkboxes injected via JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="metrics-summary">
+                <div class="metric-card glass">
+                    <div class="metric-value" id="score-val">0</div>
+                    <div class="metric-label">Avg Quality Score</div>
+                </div>
+                <div class="metric-card glass">
+                    <div class="metric-value" id="indicators-val">0</div>
+                    <div class="metric-label">Indicators Found</div>
+                </div>
+                <div class="metric-card glass">
+                    <div class="metric-value" id="company-val">-</div>
+                    <div class="metric-label">Company</div>
+                </div>
+            </div>
+
+            <div class="data-table-container">
+                <table id="metrics-table">
+                    <thead>
+                        <tr>
+
+                            <th>Indicator</th>
+                            <th>Value</th>
+                            <th>Unit</th>
+                            <th>Quality</th>
+                            <th>Source</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows injected by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
