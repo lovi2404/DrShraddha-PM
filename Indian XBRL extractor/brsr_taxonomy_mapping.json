@@ -1,0 +1,327 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "taxonomy": "https://www.sebi.gov.in/xbrl/2025-05-31/in-capmkt",
+    "description": "BRSR Core 49 KPIs mapping for ESG metrics extraction",
+    "last_updated": "2026-01-07"
+  },
+  "mappings": {
+    "environmental": {
+      "GreenhouseGasEmissionsScope1": {
+        "indicator_name": "ghg_scope1_total",
+        "description": "Total Scope 1 GHG emissions (direct emissions)",
+        "unit": "tCO2e",
+        "data_type": "float",
+        "category": "environmental"
+      },
+      "GreenhouseGasEmissionsScope2": {
+        "indicator_name": "ghg_scope2_total",
+        "description": "Total Scope 2 GHG emissions (indirect from energy)",
+        "unit": "tCO2e",
+        "data_type": "float",
+        "category": "environmental"
+      },
+      "GreenhouseGasEmissionsScope3": {
+        "indicator_name": "ghg_scope3_total",
+        "description": "Total Scope 3 GHG emissions (value chain)",
+        "unit": "tCO2e",
+        "data_type": "float",
+        "category": "environmental"
+      },
+      "GHGEmissionsIntensity": {
+        "indicator_name": "ghg_intensity",
+        "description": "GHG emissions intensity per unit revenue",
+        "unit": "tCO2e/INR",
+        "data_type": "float",
+        "category": "environmental"
+      },
+      "TotalEnergyConsumed": {
+        "indicator_name": "energy_total",
+        "description": "Total energy consumed",
+        "unit": "GJ",
+        "data_type": "float",
+        "category": "environmental"
+      },
+      "EnergyIntensity": {
+        "indicator_name": "energy_intensity",
+        "description": "Energy consumption intensity per unit revenue",
+        "unit": "GJ/INR",
+        "data_type": "float",
+        "category": "environmental"
+      },
+      "RenewableEnergyConsumed": {
+        "indicator_name": "renewable_energy",
+        "description": "Renewable energy consumed",
+        "unit": "GJ",
+        "data_type": "float",
+        "category": "environmental"
+      },
+      "NonRenewableEnergyConsumed": {
+        "indicator_name": "non_renewable_energy",
+        "description": "Non-renewable energy consumed",
+        "unit": "GJ",
+        "data_type": "float",
+        "category": "environmental"
+      },
+      "TotalWaterConsumed": {
+        "indicator_name": "water_total",
+        "description": "Total water consumed",
+        "unit": "KL",
+        "data_type": "float",
+        "category": "environmental"
+      },
+      "WaterIntensity": {
+        "indicator_name": "water_intensity",
+        "description": "Water consumption intensity per unit revenue",
+        "unit": "KL/INR",
+        "data_type": "float",
+        "category": "environmental"
+      },
+      "WaterDischarged": {
+        "indicator_name": "water_discharged",
+        "description": "Total water discharged",
+        "unit": "KL",
+        "data_type": "float",
+        "category": "environmental"
+      },
+      "PlasticWasteGenerated": {
+        "indicator_name": "waste_plastic",
+        "description": "Plastic waste generated",
+        "unit": "MT",
+        "data_type": "float",
+        "category": "environmental"
+      },
+      "EWasteGenerated": {
+        "indicator_name": "waste_ewaste",
+        "description": "E-waste generated",
+        "unit": "MT",
+        "data_type": "float",
+        "category": "environmental"
+      },
+      "BioMedicalWasteGenerated": {
+        "indicator_name": "waste_biomedical",
+        "description": "Bio-medical waste generated",
+        "unit": "MT",
+        "data_type": "float",
+        "category": "environmental"
+      },
+      "HazardousWasteGenerated": {
+        "indicator_name": "waste_hazardous",
+        "description": "Hazardous waste generated",
+        "unit": "MT",
+        "data_type": "float",
+        "category": "environmental"
+      },
+      "NonHazardousWasteGenerated": {
+        "indicator_name": "waste_non_hazardous",
+        "description": "Non-hazardous waste generated",
+        "unit": "MT",
+        "data_type": "float",
+        "category": "environmental"
+      },
+      "WasteRecycled": {
+        "indicator_name": "waste_recycled",
+        "description": "Total waste recycled",
+        "unit": "MT",
+        "data_type": "float",
+        "category": "environmental"
+      },
+      "GreenCreditsGenerated": {
+        "indicator_name": "green_credits",
+        "description": "Green credits generated or procured",
+        "unit": "credits",
+        "data_type": "integer",
+        "category": "environmental"
+      }
+    },
+    "social": {
+      "TotalEmployees": {
+        "indicator_name": "employees_total",
+        "description": "Total number of employees",
+        "unit": "count",
+        "data_type": "integer",
+        "category": "social"
+      },
+      "PermanentEmployees": {
+        "indicator_name": "employees_permanent",
+        "description": "Number of permanent employees",
+        "unit": "count",
+        "data_type": "integer",
+        "category": "social"
+      },
+      "MaleEmployees": {
+        "indicator_name": "employees_male",
+        "description": "Number of male employees",
+        "unit": "count",
+        "data_type": "integer",
+        "category": "social"
+      },
+      "FemaleEmployees": {
+        "indicator_name": "employees_female",
+        "description": "Number of female employees",
+        "unit": "count",
+        "data_type": "integer",
+        "category": "social"
+      },
+      "WomenInWorkforce": {
+        "indicator_name": "women_workforce_percentage",
+        "description": "Percentage of women in workforce",
+        "unit": "percentage",
+        "data_type": "float",
+        "category": "social"
+      },
+      "WomenInManagement": {
+        "indicator_name": "women_management_percentage",
+        "description": "Percentage of women in management",
+        "unit": "percentage",
+        "data_type": "float",
+        "category": "social"
+      },
+      "EmployeeTurnoverRate": {
+        "indicator_name": "turnover_rate",
+        "description": "Employee turnover rate",
+        "unit": "percentage",
+        "data_type": "float",
+        "category": "social"
+      },
+      "TrainingHoursPerEmployee": {
+        "indicator_name": "training_hours_avg",
+        "description": "Average training hours per employee",
+        "unit": "hours",
+        "data_type": "float",
+        "category": "social"
+      },
+      "EmployeesTrainedOnESG": {
+        "indicator_name": "employees_trained_esg",
+        "description": "Number of employees trained on ESG",
+        "unit": "count",
+        "data_type": "integer",
+        "category": "social"
+      },
+      "WorkplaceAccidents": {
+        "indicator_name": "accidents_workplace",
+        "description": "Number of workplace accidents",
+        "unit": "count",
+        "data_type": "integer",
+        "category": "social"
+      },
+      "LostTimeInjuryFrequencyRate": {
+        "indicator_name": "ltifr",
+        "description": "Lost Time Injury Frequency Rate",
+        "unit": "rate",
+        "data_type": "float",
+        "category": "social"
+      },
+      "GrossWagesPaidToWomen": {
+        "indicator_name": "wages_women_total",
+        "description": "Gross wages paid to women",
+        "unit": "INR",
+        "data_type": "float",
+        "category": "social"
+      },
+      "JobsCreatedInSmallTowns": {
+        "indicator_name": "jobs_small_towns",
+        "description": "Jobs created in small towns",
+        "unit": "count",
+        "data_type": "integer",
+        "category": "social"
+      },
+      "DisabledEmployees": {
+        "indicator_name": "employees_disabled",
+        "description": "Number of employees with disabilities",
+        "unit": "count",
+        "data_type": "integer",
+        "category": "social"
+      },
+      "CustomerComplaints": {
+        "indicator_name": "complaints_customer",
+        "description": "Number of customer complaints",
+        "unit": "count",
+        "data_type": "integer",
+        "category": "social"
+      },
+      "DataPrivacyBreaches": {
+        "indicator_name": "data_breaches",
+        "description": "Number of data privacy breaches",
+        "unit": "count",
+        "data_type": "integer",
+        "category": "social"
+      }
+    },
+    "governance": {
+      "BoardMeetingsHeld": {
+        "indicator_name": "board_meetings",
+        "description": "Number of board meetings held",
+        "unit": "count",
+        "data_type": "integer",
+        "category": "governance"
+      },
+      "IndependentDirectors": {
+        "indicator_name": "directors_independent",
+        "description": "Number of independent directors",
+        "unit": "count",
+        "data_type": "integer",
+        "category": "governance"
+      },
+      "WomenDirectors": {
+        "indicator_name": "directors_women",
+        "description": "Number of women directors",
+        "unit": "count",
+        "data_type": "integer",
+        "category": "governance"
+      },
+      "AntiCorruptionTraining": {
+        "indicator_name": "training_anti_corruption",
+        "description": "Employees trained on anti-corruption",
+        "unit": "count",
+        "data_type": "integer",
+        "category": "governance"
+      },
+      "EthicsViolations": {
+        "indicator_name": "ethics_violations",
+        "description": "Number of ethics violations reported",
+        "unit": "count",
+        "data_type": "integer",
+        "category": "governance"
+      },
+      "SupplierESGAssessments": {
+        "indicator_name": "supplier_esg_assessments",
+        "description": "Number of suppliers assessed for ESG",
+        "unit": "count",
+        "data_type": "integer",
+        "category": "governance"
+      },
+      "CSRSpending": {
+        "indicator_name": "csr_spending",
+        "description": "Total CSR spending",
+        "unit": "INR",
+        "data_type": "float",
+        "category": "governance"
+      },
+      "CSRSpendingPercentage": {
+        "indicator_name": "csr_spending_percentage",
+        "description": "CSR spending as percentage of net profit",
+        "unit": "percentage",
+        "data_type": "float",
+        "category": "governance"
+      },
+      "StakeholderEngagementSessions": {
+        "indicator_name": "stakeholder_sessions",
+        "description": "Number of stakeholder engagement sessions",
+        "unit": "count",
+        "data_type": "integer",
+        "category": "governance"
+      }
+    }
+  },
+  "alternative_names": {
+    "Scope1Emissions": "GreenhouseGasEmissionsScope1",
+    "Scope2Emissions": "GreenhouseGasEmissionsScope2",
+    "Scope3Emissions": "GreenhouseGasEmissionsScope3",
+    "TotalEnergy": "TotalEnergyConsumed",
+    "TotalWater": "TotalWaterConsumed",
+    "NumberOfEmployees": "TotalEmployees",
+    "EmployeeCount": "TotalEmployees",
+    "WomenEmployees": "FemaleEmployees"
+  }
+}

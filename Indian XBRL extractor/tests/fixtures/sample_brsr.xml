@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrl xmlns="http://www.xbrl.org/2003/instance"
+      xmlns:xbrli="http://www.xbrl.org/2003/instance"
+      xmlns:sebi="https://www.sebi.gov.in/xbrl/2025-05-31/in-capmkt"
+      xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+    <!-- Context Definitions -->
+    <xbrli:context id="ctx_2024_annual">
+        <xbrli:entity>
+            <xbrli:identifier scheme="CIN">L12345MH2000PLC123456</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:startDate>2023-04-01</xbrli:startDate>
+            <xbrli:endDate>2024-03-31</xbrli:endDate>
+        </xbrli:period>
+    </xbrli:context>
+    
+    <!-- Unit Definitions -->
+    <xbrli:unit id="tCO2e">
+        <xbrli:measure>sebi:tCO2e</xbrli:measure>
+    </xbrli:unit>
+    
+    <xbrli:unit id="GJ">
+        <xbrli:measure>sebi:GJ</xbrli:measure>
+    </xbrli:unit>
+    
+    <xbrli:unit id="KL">
+        <xbrli:measure>sebi:KL</xbrli:measure>
+    </xbrli:unit>
+    
+    <xbrli:unit id="count">
+        <xbrli:measure>sebi:count</xbrli:measure>
+    </xbrli:unit>
+    
+    <xbrli:unit id="INR">
+        <xbrli:measure>iso4217:INR</xbrli:measure>
+    </xbrli:unit>
+    
+    <xbrli:unit id="percentage">
+        <xbrli:measure>sebi:percentage</xbrli:measure>
+    </xbrli:unit>
+    
+    <!-- Company Information -->
+    <sebi:CompanyName contextRef="ctx_2024_annual">Sample BRSR Company Ltd</sebi:CompanyName>
+    
+    <!-- Environmental Metrics -->
+    <sebi:GreenhouseGasEmissionsScope1 contextRef="ctx_2024_annual" unitRef="tCO2e" decimals="2">5000.50</sebi:GreenhouseGasEmissionsScope1>
+    <sebi:GreenhouseGasEmissionsScope2 contextRef="ctx_2024_annual" unitRef="tCO2e" decimals="2">3000.25</sebi:GreenhouseGasEmissionsScope2>
+    <sebi:GreenhouseGasEmissionsScope3 contextRef="ctx_2024_annual" unitRef="tCO2e" decimals="2">12000.75</sebi:GreenhouseGasEmissionsScope3>
+    <sebi:GHGEmissionsIntensity contextRef="ctx_2024_annual" decimals="4">0.0025</sebi:GHGEmissionsIntensity>
+    
+    <sebi:TotalEnergyConsumed contextRef="ctx_2024_annual" unitRef="GJ" decimals="2">150000.00</sebi:TotalEnergyConsumed>
+    <sebi:EnergyIntensity contextRef="ctx_2024_annual" decimals="4">0.0015</sebi:EnergyIntensity>
+    <sebi:RenewableEnergyConsumed contextRef="ctx_2024_annual" unitRef="GJ" decimals="2">45000.00</sebi:RenewableEnergyConsumed>
+    <sebi:NonRenewableEnergyConsumed contextRef="ctx_2024_annual" unitRef="GJ" decimals="2">105000.00</sebi:NonRenewableEnergyConsumed>
+    
+    <sebi:TotalWaterConsumed contextRef="ctx_2024_annual" unitRef="KL" decimals="2">250000.00</sebi:TotalWaterConsumed>
+    <sebi:WaterIntensity contextRef="ctx_2024_annual" decimals="4">0.0020</sebi:WaterIntensity>
+    <sebi:WaterDischarged contextRef="ctx_2024_annual" unitRef="KL" decimals="2">200000.00</sebi:WaterDischarged>
+    
+    <sebi:PlasticWasteGenerated contextRef="ctx_2024_annual" decimals="2">50.25</sebi:PlasticWasteGenerated>
+    <sebi:EWasteGenerated contextRef="ctx_2024_annual" decimals="2">15.50</sebi:EWasteGenerated>
+    <sebi:HazardousWasteGenerated contextRef="ctx_2024_annual" decimals="2">100.75</sebi:HazardousWasteGenerated>
+    <sebi:NonHazardousWasteGenerated contextRef="ctx_2024_annual" decimals="2">500.00</sebi:NonHazardousWasteGenerated>
+    <sebi:WasteRecycled contextRef="ctx_2024_annual" decimals="2">400.00</sebi:WasteRecycled>
+    
+    <!-- Social Metrics -->
+    <sebi:TotalEmployees contextRef="ctx_2024_annual" unitRef="count" decimals="0">5000</sebi:TotalEmployees>
+    <sebi:PermanentEmployees contextRef="ctx_2024_annual" unitRef="count" decimals="0">4500</sebi:PermanentEmployees>
+    <sebi:MaleEmployees contextRef="ctx_2024_annual" unitRef="count" decimals="0">3000</sebi:MaleEmployees>
+    <sebi:FemaleEmployees contextRef="ctx_2024_annual" unitRef="count" decimals="0">2000</sebi:FemaleEmployees>
+    
+    <sebi:WomenInWorkforce contextRef="ctx_2024_annual" unitRef="percentage" decimals="2">40.00</sebi:WomenInWorkforce>
+    <sebi:WomenInManagement contextRef="ctx_2024_annual" unitRef="percentage" decimals="2">35.00</sebi:WomenInManagement>
+    <sebi:EmployeeTurnoverRate contextRef="ctx_2024_annual" unitRef="percentage" decimals="2">12.50</sebi:EmployeeTurnoverRate>
+    
+    <sebi:TrainingHoursPerEmployee contextRef="ctx_2024_annual" decimals="2">40.00</sebi:TrainingHoursPerEmployee>
+    <sebi:EmployeesTrainedOnESG contextRef="ctx_2024_annual" unitRef="count" decimals="0">4800</sebi:EmployeesTrainedOnESG>
+    
+    <sebi:WorkplaceAccidents contextRef="ctx_2024_annual" unitRef="count" decimals="0">5</sebi:WorkplaceAccidents>
+    <sebi:LostTimeInjuryFrequencyRate contextRef="ctx_2024_annual" decimals="4">0.5000</sebi:LostTimeInjuryFrequencyRate>
+    
+    <sebi:GrossWagesPaidToWomen contextRef="ctx_2024_annual" unitRef="INR" decimals="2">500000000.00</sebi:GrossWagesPaidToWomen>
+    <sebi:JobsCreatedInSmallTowns contextRef="ctx_2024_annual" unitRef="count" decimals="0">150</sebi:JobsCreatedInSmallTowns>
+    <sebi:DisabledEmployees contextRef="ctx_2024_annual" unitRef="count" decimals="0">50</sebi:DisabledEmployees>
+    
+    <sebi:CustomerComplaints contextRef="ctx_2024_annual" unitRef="count" decimals="0">25</sebi:CustomerComplaints>
+    <sebi:DataPrivacyBreaches contextRef="ctx_2024_annual" unitRef="count" decimals="0">0</sebi:DataPrivacyBreaches>
+    
+    <!-- Governance Metrics -->
+    <sebi:BoardMeetingsHeld contextRef="ctx_2024_annual" unitRef="count" decimals="0">12</sebi:BoardMeetingsHeld>
+    <sebi:IndependentDirectors contextRef="ctx_2024_annual" unitRef="count" decimals="0">6</sebi:IndependentDirectors>
+    <sebi:WomenDirectors contextRef="ctx_2024_annual" unitRef="count" decimals="0">3</sebi:WomenDirectors>
+    
+    <sebi:AntiCorruptionTraining contextRef="ctx_2024_annual" unitRef="count" decimals="0">5000</sebi:AntiCorruptionTraining>
+    <sebi:EthicsViolations contextRef="ctx_2024_annual" unitRef="count" decimals="0">2</sebi:EthicsViolations>
+    <sebi:SupplierESGAssessments contextRef="ctx_2024_annual" unitRef="count" decimals="0">100</sebi:SupplierESGAssessments>
+    
+    <sebi:CSRSpending contextRef="ctx_2024_annual" unitRef="INR" decimals="2">50000000.00</sebi:CSRSpending>
+    <sebi:CSRSpendingPercentage contextRef="ctx_2024_annual" unitRef="percentage" decimals="2">2.50</sebi:CSRSpendingPercentage>
+    <sebi:StakeholderEngagementSessions contextRef="ctx_2024_annual" unitRef="count" decimals="0">20</sebi:StakeholderEngagementSessions>
+    
+</xbrl>
